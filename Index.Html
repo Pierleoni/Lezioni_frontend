@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- il tag <doctype html> è una dichiariazione iniziale che ha più funzioni:
+1) tutti i documenti Html devono iniziare con questa dichiarazione per essere conforme agli standard Html di base 
+2) far sapere al browser web del visitatore che si tratta di un documeto html5.
+I tag sono parole chiave, messe tra parentesi angolari (es:<>), che una pagina web usa per definire come il tuo browser web formatterà e visualizzerà il contenuto.
+Solitamente vengono forniti in coppia: uno di apertura (es: <head>) e uno di chiusura (es:</head>).   -->
+<!-- il tag <html> serve per delimitare lo spazio al cui interno verra scritto il codice Html5 -->
+<html lang="en">
+
+<head>
+    <!-- il tag <head> rappresenta le informazioni su una pagina web e sono informazioni non visibili nella parte grafica del sito.
+Molti dei dati che sono all'interno di questa sezione possono essere collegamenti a script, a fogli di stile CSS-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- il tag <title> serve per dare il titolo al sito web -->
+    <!-- la differenza tra il tag e l'elemento è che l'elemeto è cio che si trova tra il tag di apertura e quello di chiusura  -->
+    <title>Ziapina</title>
+</head>
+<!-- ctrl +ù: crea un commento vuoto
+se si tiene premuto alt e si utlizzano le freccie direzionali su e giu scambia la riga con quella inferiore o superiore 
+se si tiene premuto alt + shift: copia la riga 
+se tieni premuto alt e clicci da l'altre parti del testo creerai altre istanze del cursore( per resettare basta cliccare in un qualsiasi spazio)
+se premi ctrl + d quando hai selezionato una parola: selezionerà tutte le occorenze di quella parola successive
+alt+z: manda accappo qualsiasi riga di codice in overflow
+alt+shift+f: riordina esteticamente il codice
+ctrl + (backspace)canc: si applica ad un intera parola in questo caso ti cancella gli spazi vuoti
+ctrl + w: chiude le tab
+ctrl+Shift+K: cancella l'intera linea di codice -->
+
+<body>
+    <!-- il tag <body> è cio che vogliamo far vedere all'utente che visita il sito e all'interno di questo tag si inserisco tutti quei blocchi che andranno a comporre il sito
+-->
+    <!-- il tag <h1/2/3/etc.(fino al h6) è il tag di intestazione -->
+    <h1>Schiesse Got</h1>
+    <h2>Porco dio</h2>
+    <h3>Porca madonna</h3>
+    <!-- gli "a" o tag anchor servono per la navigazione interna al sito -->
+    <a href="https://www.google.com">clicca qui</a>
+    <!-- L'attributo href serve per creare un collegamento ipertestuale che mi porti ad esempio, come in questo caso, su Google o su altri motori di ricerca   -->
+    <!-- la tag p sono i paragrafi: cioe contentuti puramente testuale in cui puoi mettere link e tag di formattazione -->
+    <p>
+        <!-- questa tag (cite), come tante altre (code, adress,em, etc.) sono tag pre-fomattate utili al discorimento per accessibilità agli ipovedenti e tutto cio che non è utile al reich  -->
+        <cite>Lorem </cite>
+        ipsum dolor sit amet consectetur adipisicing
+        <!--questa tag(br) [curcio docet] serve a mandare accappo il testo 
+            se mandi accappo senza br non verra visto nel sito. 
+            N.B.!!Non necessitano di un tag di chiusura!! -->
+        <br> <i> Nesciunt veritatis mollitia repudiandae facere harum, </i>unde et eius exercitationem! Voluptas
+        voluptatum
+        totam perspiciatis asperiores repellendus veritatis in, ab sed et fugit.
+    </p>
+    <p>
+        <!-- Ci sono i tag che servono per la formattazione del testo e sono:
+        1)b (bold): definisce il testo in grasetto
+        2)strong: elemento che definisce il testo con una forte importanza, il contentuto dentro i tag viene tipicamente visualizzato in grasetto
+        3) i (italic): definisce il testo in corsivoù
+        4) em(Emphasized): elemento che definisce il testo enfatizzato/sottolineato. Questo tag si usa per facilitare la lettura ad un ipovedente e cosi facendo il suo sreen reader pronuncera la/e parola/e con un enfasi, ponendo l'accento
+        5) small: definsce un testo di dimensioni più piccole
+        6) mark: definisce il testo sottolineato
+        7) del(deleted): definisce il testo o la parola che deve essere cancellatta dal documento, viene visualizzata con una riga nera sopra
+        8) ins(insert): definisce il testo che viene inserito nel documento, il browser quasi sempre sottoliena il testo inserito
+        9) sub(subscript): definisce il testo come pedice. Puo essere usato per le formule chimiche.
+        10) Sup(supscript): definsce il testo come apice-->
+        <mark> <i>Lorem <big>ipsum dolor</big></i>, <b>sit amet </b> <small>consectetur adipisicing elit</small>.
+            <br> Optio <sub>necessitatibus</sub> <sub>consequuntur iste</sub> ratione, expedita nemo, <ins>unde sapiente
+                fuga</ins> <del>qui asperiores ducimus repellendus</del>.
+            <br> Suscipit libero harum et, <strong>distinctio</strong> quod rerum inventore!
+        </mark>
+    </p>
+    <!-- il tag audio serve per inserire un file audio (mp3 o wav).
+    Gli atrtributi controls, autoplay, etc. sono attributi booleani (boolean attribute):
+    questi attributi servono ad indicare i parametri di vero o falso (on, off) e per impostare questi parametri basta semplicemte non scrivere l'attributo
+    -->
+    <audio controls autoplay>
+        <!-- in caso si abbia la necessita di fare un backup del file audio poichè non viene supportato dal browser.
+        i passaggi da seguire sono:
+        1) creare un tag di chiusura audio (</audio>)
+        2)creare 1 o piu tag source che vengono usati come ramificazioni della sorgente; 
+        cioè nel caso che il browser non supporti i file .mp3, ma ho anche inserito un file .wav nella directory, in questo modo il browser mi leggera il file .wav anziche l mp3
+        3) all'interno del tag source aggiungere l'attributo source + il nome del file-->
+        <source src="/Media/SAN CULAMO-mhanno scomunicato.mp3">
+        <source src="/Media/SAN CULAMO-mhanno scomunicato.wav">
+        Questo browser supporta i file HTML5 Audio
+    </audio>
+    <!-- il tag div serve è un contenitore per organnizare la pagina web e puo contenere qualisiasi tipo di tag (anche altri div) 
+            il div di per se non ha alcun effetto sulla visualizzazione almeno finche non gli vengono applicati regole di CSS -->
+    <div>
+        <!-- il tag ul viene utilizzato per creare liste non numerate -->
+        <h4>Unordered list</h4>
+        <ul type="I">
+            <!-- li è il tag per creare gli elementi all'interno della lista -->
+            <li>Porco dio</li>
+            <li>Porco cristo</li>
+            <li>Porco san serapione martire</li>
+            <li>Porco padre pio</li>
+        </ul>
+        <!-- il tag hr crea una linea divisoria orizzontale -->
+        <hr>
+        <!-- il tag ol (ordered list) crea una lista numerata.
+        N.B. Di default questa tag crea un lista numerata con i numeri arabi
+        All'interno del tag possiamo mettere un atributo che va a definire come vengono numerati i gli elementi all'interno della casella numerata
+        (es: 
+        type="A" numera con le lettere dell'alfabeto in maiuscolo, 
+        Type="1" numera con i numeri arabi, 
+        type="a" numera con le lettere dell'alfabeto in minuscolo)
+        type="I" numera con i numeri romani
+        type="i" numera con i numeri romani in minuscolo-->
+        <h5>Orderd list</h5>
+        <ol type="A">
+            <li>Porca madonna</li>
+            <li>Porca crista</li>
+            <li>Porca maria elena boschi</li>
+            <li>Porca madre teresa di calcutta</li>
+        </ol>
+        <!-- size e width sono gli ATTRIBUTI del tag hr size è l'altezza e width e la larghezza  -->
+        <hr size="5px" width="50%">
+        <!-- la tag dl (dictionary list) crea una coppia di termini e definzioni-->
+        <h6>Description list</h6>
+        <dl>
+            <!-- il tag dt sta per description term, metre il tag dd sta per description definition.
+            il termine è una parola da definire e la definzione è per l'appunto la definizione-->
+            <dt>madonna</dt>
+            <dd>puttana schifosa matta in culo</dd>
+            <dt>gesù o gegiù</dt>
+            <dd>cretino eroinomane</dd>
+            <dt>dio</dt>
+            <dd>bastardo infame rotto in culo</dd>
+            <dd>puzza pure di
+                <ol>
+                    <li> sborra </li>
+                    <li> purè </li>
+                    <li>giuliano ferrara </li>
+                    <li> l'alito di bruno vespa</li>
+                </ol>
+            </dd>
+        </dl>
+        <dl>
+            <dt>HTML</dt>
+            <dd>definisce la struttura della pagina web</dd>
+            <dt>CSS</dt>
+            <dd>definisce lo stile della pagina web</dd>
+            <dt>Javascript</dt>
+            <dd>definisce le funzionalità della pagina web</dd>
+        </dl>
+        <hr>
+        <div>
+            <!-- il tag img sta per immagine nel attributo src(source) c'è la sorgente dell'immagine, si puo usare un URL come sotto 
+            l'attributo height è un attributo css in questo caso lo stiamo utillizando per definire l'altezza di queste 2 immagini.
+            Mentre l'attributo width è la larghezza dell'immagine.
+            N.B. sia la height che la width si scalano propozionalmente l'una all'altra.
+            L'attributo alt serve per digitare una frase che venga letta da uno screen reader di un utente ipovedente
+            L'attributo title aggiunge una picolla casella pop-up che appare sull'immagine quando ci si passa il cursore del mouse sopra-->
+            <!-- é possibile creare un hyperlink tramite l'immagine con il tag a [anchor] e l'attributo href -->
+            <a href="https://www.youtube.com/watch?v=EZunugFgt_Q&ab_channel">
+                <img src="https://pictures.abebooks.com/isbn/9781671870673-it.jpg" height="100px" width="200"
+                    alt="il porco di iddio" title="il porco di iddio">
+            </a>
+            <!-- la sorgente dell'immagine può essere aggiornata tramite la posizione file tramite la notazione esplora risorse(/) -->
+            <a href="https://www.youtube.com/watch?v=6C98-j7ogUU&ab_channel">
+                <img src="/Media/porca madonna.jpg" height="100px" width="300" alt="la porca madonna">
+            </a>
+            <a href="https://it.wikipedia.org/wiki/Germano_Mosconi">
+                <img src="/Media/santo Mosconi.jpg" height="100" width="200" alt="San Mosconi" title="San Mosconi">
+            </a>
+            <!-- il tag video serve ad importare un file video all'interno del website, ovviamente, come per i file audio, servono sempre degli attributi booleani per aggiungere i controlli, l'autoplay, il mute,etc.
+            posso anche decidere l'altezza della finestra aggiungendo l'attributo width.
+            Come per l'audio posso creare dei file sorgenti di backup in caso il browser non mi supporti un estensione in favore di un altra.
+            N.B.!!Le estioni video supportate sono .MP4, .WebM, .Ogg!!-->
+            <video controls autoplay muted loop width="300">
+                <source src="/Media/Paul McCartney & Rick Rubin Listen To CANNIBAL CORPSE.mp4">
+                <source src="/Media/Paul McCartney & Rick Rubin Listen To CANNIBAL CORPSE.WebM">
+                <source src="/Media/Paul McCartney & Rick Rubin Listen To CANNIBAL CORPSE.Ogg">
+            </video>
+
+        </div>
+        <!-- il tag table serve a creare una tabella.
+        il tag tr  crea una riga. 
+        i tag th (crea la riga di intestazione) e td (crea i dati della tabella) sono per creare delle celle per ogni colonna rispettivmente formattate per titolo e per dato
+        i tag di css da mettere come attributi a il tag table sono border (crea le linee della tabella), cellspacing (aumenta lo spazio tra le celle),
+        il tag cellpadding(crea lo spazio tra il contenuto e il bordo interno).
+        Un altro attributo è bgcolor; con esso posso decidere il colore di tutta la tabella(se messo all'interno del tag table) 
+        oppure il colore della riga (se messo all'interno del tag tr)
+        o della singola cella (se posto all'interno dei tag th e td)-->
+        <table bgcolor="black" border="2" cellspacing="5" cellpadding="10">
+            <!-- l'attributo align fa in modo che gli elementi all'interno delle celle si allineano al centro, sinistra o destra  -->
+            <tr bgcolor="red" align="center">
+                <th>divinità</th>
+                <th>primo attributo</th>
+                <th>secondo attributo</th>
+            </tr>
+            <tr bgcolor="lightred" align="center">
+                <th>dio</th>
+                <td>Porco</td>
+                <td>schifoso</td>
+            </tr>
+            <tr bgcolor="lightblue" align="center">
+                <th>la madonna</th>
+                <td>porca</td>
+                <td>lurida</td>
+            </tr>
+            <tr bgcolor="yellow" align="center">
+                <th>padre pio</th>
+                <td>marmaldo</td>
+            </tr>
+        </table>
+        <!-- L'attributo witdh è utile quando ho la necessità di far in modo che le celle della tabella abbiano tutte la stessa larghezza
+            N.B. L'attributo witdh posto all'interno del tag di apertura table è la larghezza di ciascuna cella moltiplicata per il numero di celle
+            (es: ogni cella ha una larghezza di 100px, le celle in totale sono 8 ergo il numero di px totale è di 800)-->
+        <table border="8" bgcolor="grey" width="800" cellspacing="4" cellpading="6">
+            <tr bgcolor="lightgrey" align="center">
+                <th width="100">domenica</th>
+                <th width="100">lunedi</th>
+                <th width="100">martedi</th>
+                <th width="100">mercoledi</th>
+                <th width="100">giovedi</th>
+                <th width="100">venerdi</th>
+                <th width="100">sabato</th>
+                <th width="100">domenica</th>
+            </tr>
+            <tr bgcolor="purple" align="center">
+                <td>9:30</td>
+                <td>9 - 22</td>
+                <td>9 - 23</td>
+                <td>24H</td>
+                <td>12:00</td>
+                <td>13:00- 18:00</td>
+                <td>14:40 - 00: 55</td>
+                <td>13:12</td>
+            </tr>
+            <tr bgcolor="blue" align="center">
+                <td>bestemmiare dio</td>
+                <td>bestemmiare San Francesco</td>
+                <td>bestemmiare Padre pio</td>
+                <td>bestemmiare la madonna</td>
+                <td>bestemmiare la diocesi </td>
+                <td>bestemmiare la sacra sindone</td>
+                <td>bestemmiare Santa rita</td>
+                <td>Gloria a Nando Martellone</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <!-- il tag form crea un campo per la compilazione moduli, tutti quanti gli input all'interni di quelli campo saranno assegnati automaticamente al form -->
+        <form action="" id="bestemmiaInsiemeAMe">
+            <!-- il tag select crea un input a scelta multipla.
+            L'attributo name serve per dare nome all'input.
+            il tag option crea ogni valore che si puo attribuire a questo form.
+            Nell'attributo value si determinera il valore che verrà comunicato al backend.
+            N.B. tutto il tag option ragiona in termini discreti e questi ultimi li decido io nel tag.-->
+            <div>
+                <!--   qui possiamo vedere il potere del div: raggrupando etichetta ed input veranno visiamente accorpati in maniera oridanata -->
+                <!-- il tag label serve per assegnare un'etichetta ad degli input 
+                for serve ad appicicare al label l'elemento a cui va appicicato-->
+                <label for="santo"> Fai la formazione </label>
+                <br>
+                <select name="santo" id="">
+                    <option value="dio">Dio</option>
+                    <option value="cristo">cristo</option>
+                    <option value="spirito santo">spirito santo</option>
+                    <option value="san pietro">san pietro</option>
+                    <option value="san paolo">san paolo</option>
+                    <option value="san marco">san marco</option>
+                    <option value="madonna">madonna</option>
+                </select>
+
+            </div>
+            <div>
+                <!--l'attributo id, per ora, serve per permettere alla label il tag a cui incollarsi
+                L'attributo form specifica a quale form la label appartiene -->
+                <label for="insulti liberi" form="insulti liberi">
+                    Insulti liberi
+                </label>
+                <br>
+                <!-- il tag textarea va a formare crea un input di trsto dove l'utente puo scrivere liberamente.
+                negli alttributi cols (colonne verticali) e rows(file orizzontali) si crea la dimensione dell'area di testo.
+                nell'attributo placeholder all'interno della texarea verra posto un testo che dovrà essere cancellato manualmente      dall'utente-->
+                <textarea name="casella di insulti" id="insulti liberi" cols="30" rows="10" placeholder="insulti qui">
+                </textarea>
+
+            </div>
+            <!-- l'input è un tag multiuso.
+            nell'attributo type si decide il tipo di input; 
+            se si assegna il text si crea come una text area ma a riga singola.(utile per mail, forum,etc.)-->
+            <label for="insultino"> insultino</label>
+            <input type="text" id="insultino" size="8">
+            <label for="insultino"> insultone</label>
+            <input type="text" id="insultone" size="24">
+            <!-- l'attributo checkbox ha 2 attributi a sua volta che somno:
+            -nome che serve ad identificare l'input 
+            -value: determina se quel checbox(scatola) parte selzionato o meno
+            l'attributo di nome checked rende la scatoletta selezionata di default-->
+            <div>
+                <label for="checkboxPorco"> Porco?</label>
+                <input type="checkbox" name="porco" id=" checkboxPorco">
+                <label for="checkboxLadro">Ladro?</label>
+                <input type="checkbox" name="Ladro" id="checkboxLadro">
+                <label for="checkboxMaiale">Maiale?</label>
+                <input type="checkbox" name="maiale" checked id="checkboxMaiale">
+
+            </div>
+            <!-- l'attributo type="radio" crea un gruppo di interuttori a risposta singola e l'attributo name definisce il gruppo  -->
+            <label for="giorgio mastrota">giorgio mastrota </label>
+            <div id="giorgio mastrota">
+                <label for="accio inox">accio inox</label>
+                <input type="radio" name="giorgio mastrota" id="accio inox"  value="accio inox">
+                <label for="set di pentole">set di pentole</label>
+                <input type="radio" name="giorgio mastrota" id="set di pentole" value="set di pentole">
+                <label for="nanowar">nanowar</label>
+                <input type="radio" name="giorgio mastrota" id="nanowar" value="nanowar">
+            </div>
+            <label for="piergiorgio Welby">piergiorgio Welby</label>
+            <div id="piergiorgio Welby">
+                <label for="no premio nobel">no premio nobel</label>
+                <input type="radio" name="piergiorgio Welby" id="no premio nobel" value="no premio nobel">
+                <label for="signora i limoni!!!">signora i limoni!!!</label>
+                <input type="radio" name="piergiorgio Welby" id="signora i limoni!!!" value="signora i limoni!!!">
+                <label for="SIGNORAAAAAAAAAAAAAAAAA">SIGNORAAAAAAAAAAAAAAAAA</label>
+                <input type="radio" name="piergiorgio Welby" id="SIGNORAAAAAAAAAAAAAAAAA" value="SIGNORAAAAAAAAAAAAAAAAA">
+
+            </div> 
+            <!-- tutti gli input qui citati sono input specializzati. Quelli da e-mail a number accetterano solo input validi per il loro tipo altri come color o date obbligano l'utente a scelgiere le opzioni disponibili-->
+            <label for="email">email</label>
+            <input type="email" name="email" id="email">
+            
+            <label for="url">url</label>
+            <input type="url" name="url" id="url">
+
+            <label for="number">number</label>
+            <input type="number" name="number" id="number">
+            
+            <label for="date">date</label>
+            <input type="date" name="date" id="date">
+            
+            <label for="search">search</label>
+            <input type="search" name="search" id="search">
+            
+            <label for="color">color</label>
+            <input type="color" name="color" id="color">
+            
+            <label for="time">time</label>
+            <input type="time" name="time" id="time">
+            <!-- questo di input crea un pulsante per inviare al backend le informazioni raccolte nel form -->
+            <input type="submit" value="tira giu anche tu">
+        </form>
+    </div>
+</body>
+
+</html>
