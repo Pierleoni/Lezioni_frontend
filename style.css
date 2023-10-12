@@ -1,4 +1,61 @@
-.body{
-    color: aliceblue;
-    background-color: black;
+/* css è lo stile della pagina, se si usa il tag body all' suo interno posso decidere l'aspeto degli elementi della mia pagina web 
+le regole immesse nel foglio funzionano a cascata : l'ultima regola immessa è quella che ha la priorità; ma se le regole che non vengono ridefinite ereditano secondo le regole del corpo(della pagina web cioe Html)  */
+/* per importare da google o altri siti altre risores esterne (in questo caso dei font) bisogna usare il tag @import e specificare l'URL delle risorse
+per utilizzarli dobbiamo richiamrli [in questo caso attraverso il tag html perchè vogliamo specificarlo ad ogni elemento della nostra pagina]
+in questo caso l'attributo style diventa Style="color:red;" perchè voglio cambiare il colore del font e non di background 
+    in questo caso ho usato un valore rgb(Red,green, blue dove in Hex i 3 canali corrispondono a questi tre valori), digitando su internet color picker e ,con un copy e paste, incollando i 3 valori RGB   tra le parentesi dopo la proprietà rgb.
+    in questo caso ho aggiunto il colore al titolo tramite un copy and paste dei 6 valori del color picker sotto la nomencaltura HEX (esadecimale).*/
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* per pre-impostare dei valori che richiamerai spesso invece di rispecificare il valore ogni volta puoi creare delle variabili:after
+prima apri una regola  usando il selettore :root che specifica le regole per O G N I elemento del documento,
+poi specifichi un nome per la variabile e ne specifichi il valore. Per utilizzarla nelle varei regole si userà var(--nomevariabile).*/
+:root{
+    --bright:#eff;
+    --title: #bbc;
+    --dark:#001;
+}
+html{
+    font-family: 'Comfortaa', sans-serif;
+}
+body{
+    background-color: var(--dark);
+    color: var(--bright);
+    
+
+}
+/* per settare una sola regola per piu elementi si elencano con la virgola prima delle parentesi graffe */
+h1,h2,h3,h4,h5,h6{
+    color: var(--title);
+    font-weight:700;
+}
+/* pseudoclassi:
+alcuni tag sono dotati di pseudo classi, in parleo povere, delgi aspetti cge possono prendere per stati diversi;
+in questo caso stiamo lavorando sulle pseudo classi del tag anchor: 
+- link: quando il link non è stato cliccato
+- visited: quando il link è stato visitato
+- hover quando il mouse passa sopra*/
+a:link{
+    color: #f80;
+}
+a:visited{
+    color: #bf0;
+}
+a:hover{
+    color: #f0b;
+}
+mark{
+    background-color: #add;
+    color: #112;
+}
+#intro{
+    margin: 1rem;
+    padding: 1rem; 
+    border: 5px solid var(--title); 
+    border-radius: 10px; 
+}
+.intro{
+    margin: 1rem;
+    padding: 1rem; 
+    border: 5px dotted var(--title); 
+    border-radius: 10px; 
 }

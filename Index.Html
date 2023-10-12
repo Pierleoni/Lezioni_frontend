@@ -15,6 +15,8 @@ Molti dei dati che sono all'interno di questa sezione possono essere collegament
     <!-- il tag <title> serve per dare il titolo al sito web -->
     <!-- la differenza tra il tag e l'elemento è che l'elemeto è cio che si trova tra il tag di apertura e quello di chiusura  -->
     <title>Ziapina</title>
+    <link rel="stylesheet" href="/style.css">
+
 </head>
 <!-- ctrl +ù: crea un commento vuoto
 se si tiene premuto alt e si utlizzano le freccie direzionali su e giu scambia la riga con quella inferiore o superiore 
@@ -26,48 +28,102 @@ alt+shift+f: riordina esteticamente il codice
 ctrl + (backspace)canc: si applica ad un intera parola in questo caso ti cancella gli spazi vuoti
 ctrl + w: chiude le tab
 ctrl+Shift+K: cancella l'intera linea di codice -->
-<style src="/style.css"></style>
+<!-- per collegare un foglio css usare il tag link con attributo rel[relation] -->
+<!-- all'interno dell tag di apertura body si puo aggiungere l'attributo style="background-color:black;"(l'elemento che si trova tra le virgolette è una proprietà CSS per il sito web):
+questo attributo definisce il colore dello sgfondo della pagina web.
+N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori in esadecimale -->
 
 <body>
-    <!-- il tag <body> è cio che vogliamo far vedere all'utente che visita il sito e all'interno di questo tag si inserisco tutti quei blocchi che andranno a comporre il sito
--->
-    <!-- il tag <h1/2/3/etc.(fino al h6) è il tag di intestazione -->
-    <h1>Schiesse Got</h1>
-    <h2>Porco dio</h2>
-    <h3>Porca madonna</h3>
-    <!-- gli "a" o tag anchor servono per la navigazione interna al sito -->
-    <a href="https://www.google.com">clicca qui</a>
-    <!-- L'attributo href serve per creare un collegamento ipertestuale che mi porti ad esempio, come in questo caso, su Google o su altri motori di ricerca   -->
-    <!-- la tag p sono i paragrafi: cioe contentuti puramente testuale in cui puoi mettere link e tag di formattazione -->
-    <p>
-        <!-- questa tag (cite), come tante altre (code, adress,em, etc.) sono tag pre-fomattate utili al discorimento per accessibilità agli ipovedenti e tutto cio che non è utile al reich  -->
-        <cite>Lorem </cite>
-        ipsum dolor sit amet consectetur adipisicing
-        <!--questa tag(br) [curcio docet] serve a mandare accappo il testo 
-            se mandi accappo senza br non verra visto nel sito. 
-            N.B.!!Non necessitano di un tag di chiusura!! -->
-        <br> <i> Nesciunt veritatis mollitia repudiandae facere harum, </i>unde et eius exercitationem! Voluptas
-        voluptatum
-        totam perspiciatis asperiores repellendus veritatis in, ab sed et fugit.
-    </p>
-    <p>
-        <!-- Ci sono i tag che servono per la formattazione del testo e sono:
-        1)b (bold): definisce il testo in grasetto
-        2)strong: elemento che definisce il testo con una forte importanza, il contentuto dentro i tag viene tipicamente visualizzato in grasetto
-        3) i (italic): definisce il testo in corsivoù
-        4) em(Emphasized): elemento che definisce il testo enfatizzato/sottolineato. Questo tag si usa per facilitare la lettura ad un ipovedente e cosi facendo il suo sreen reader pronuncera la/e parola/e con un enfasi, ponendo l'accento
-        5) small: definsce un testo di dimensioni più piccole
-        6) mark: definisce il testo sottolineato
-        7) del(deleted): definisce il testo o la parola che deve essere cancellatta dal documento, viene visualizzata con una riga nera sopra
-        8) ins(insert): definisce il testo che viene inserito nel documento, il browser quasi sempre sottoliena il testo inserito
-        9) sub(subscript): definisce il testo come pedice. Puo essere usato per le formule chimiche.
-        10) Sup(supscript): definsce il testo come apice-->
-        <mark> <i>Lorem <big>ipsum dolor</big></i>, <b>sit amet </b> <small>consectetur adipisicing elit</small>.
-            <br> Optio <sub>necessitatibus</sub> <sub>consequuntur iste</sub> ratione, expedita nemo, <ins>unde sapiente
-                fuga</ins> <del>qui asperiores ducimus repellendus</del>.
-            <br> Suscipit libero harum et, <strong>distinctio</strong> quod rerum inventore!
-        </mark>
-    </p>
+    
+    <div id="intro">
+        <div class="intro">
+    
+            <h1>Schiesse Got</h1>
+            <p>
+        
+                il tag body è cio che vogliamo far vedere all'utente che visita il sito e all'interno di questo tag si inserisco
+                tutti quei blocchi che andranno a comporre il sito, il tag h1/2/3/etc.(fino al h6) è il tag di intestazione
+            </p>
+        </div>
+        <div>
+            <h1>Porco dio</h1>
+            <p>
+                gli "a" o tag anchor servono per la navigazione interna al sito:
+                <br>
+                <a href="https://www.google.com">tipo questo</a>
+                <br>
+                L'attributo href serve per creare un collegamento ipertestuale che mi porti ad esempio, come in questo caso, su
+                Google o su altri motori di ricerca
+            </p>
+    
+        </div>
+        <div class="intro">
+    
+            <h2>Porca madonna</h2>
+            la tag p sono i paragrafi: cioe contentuti puramente testuale in cui puoi mettere link e tag di formattazione.
+            <p>
+                in questo caso ho cambiato sia il colore di background per il paragrafo sia il colore stesso delle lettere
+                utilizzando 2 dei tre modi per mettere il colore
+            </p>
+        </div>
+        <div class="intro">
+        <p>
+            questa tag (cite), come tante altre (code, adress,em, etc.) sono tag pre-fomattate utili al discorimento per
+            accessibilità agli ipovedenti e tutto cio che non è utile al reich 
+        </p>
+        </div>
+        <div class="intro">
+            <cite>Lorem </cite>
+            <p>
+                questa tag(br) [curcio docet] serve a mandare accappo il testo
+                se mandi accappo senza br non verra visto nel sito.
+                N.B.!!Non necessitano di un tag di chiusura!!
+        </div>
+        </p>
+        <div class="intro">
+            <p>
+                Ci sono i tag che servono per la formattazione del testo e sono:
+            </p>
+            <ol>
+                <li>
+                    <b> b (bold): definisce il testo in grasetto </b>
+                </li>
+                <li>
+                    <strong>strong</strong>: elemento che definisce il testo con una forte importanza, il contentuto dentro i tag viene
+                    tipicamente visualizzato in grasetto
+                </li>
+                <li>
+                    <i>i</i> (italic): definisce il testo in corsivoù
+                </li>
+                <li>
+                    <em>em</em>(Emphasized): elemento che definisce il testo enfatizzato/sottolineato. Questo tag si usa per
+                    facilitare la lettura ad un ipovedente e cosi facendo il suo sreen reader pronuncera la/e parola/e con un
+                    enfasi, ponendo l'accento
+                </li>
+                <li>
+                    <small>small</small>: definsce un testo di dimensioni più piccole
+                </li>
+                <li>
+                    <mark>mark</mark> definisce il testo sottolineato
+                </li>
+                <li>
+                    <del>del</del>(deleted): definisce il testo o la parola che deve essere cancellatta dal documento, viene
+                    visualizzata con una riga nera sopra
+                </li>
+                <li>
+                    <ins>ins</ins>(insert): definisce il testo che viene inserito nel documento, il browser quasi sempre sottoliena il
+                    testo inserito
+                </li>
+                <li>
+                    <sub>sub</sub>(subscript): definisce il testo come pedice. Puo essere usato per le formule chimiche.
+                </li>
+                <li>
+                    <sup>sup</sup>(supscript): definsce il testo come apice
+                </li>
+                
+            </ol>
+        </div>
+    </div>
     <!-- il tag audio serve per inserire un file audio (mp3 o wav).
     Gli atrtributi controls, autoplay, etc. sono attributi booleani (boolean attribute):
     questi attributi servono ad indicare i parametri di vero o falso (on, off) e per impostare questi parametri basta semplicemte non scrivere l'attributo
@@ -303,7 +359,7 @@ ctrl+Shift+K: cancella l'intera linea di codice -->
             <label for="giorgio mastrota">giorgio mastrota </label>
             <div id="giorgio mastrota">
                 <label for="accio inox">accio inox</label>
-                <input type="radio" name="giorgio mastrota" id="accio inox"  value="accio inox">
+                <input type="radio" name="giorgio mastrota" id="accio inox" value="accio inox">
                 <label for="set di pentole">set di pentole</label>
                 <input type="radio" name="giorgio mastrota" id="set di pentole" value="set di pentole">
                 <label for="nanowar">nanowar</label>
@@ -316,28 +372,29 @@ ctrl+Shift+K: cancella l'intera linea di codice -->
                 <label for="signora i limoni!!!">signora i limoni!!!</label>
                 <input type="radio" name="piergiorgio Welby" id="signora i limoni!!!" value="signora i limoni!!!">
                 <label for="SIGNORAAAAAAAAAAAAAAAAA">SIGNORAAAAAAAAAAAAAAAAA</label>
-                <input type="radio" name="piergiorgio Welby" id="SIGNORAAAAAAAAAAAAAAAAA" value="SIGNORAAAAAAAAAAAAAAAAA">
+                <input type="radio" name="piergiorgio Welby" id="SIGNORAAAAAAAAAAAAAAAAA"
+                    value="SIGNORAAAAAAAAAAAAAAAAA">
 
-            </div> 
+            </div>
             <!-- tutti gli input qui citati sono input specializzati. Quelli da e-mail a number accetterano solo input validi per il loro tipo altri come color o date obbligano l'utente a scelgiere le opzioni disponibili-->
             <label for="email">email</label>
             <input type="email" name="email" id="email">
-            
+
             <label for="url">url</label>
             <input type="url" name="url" id="url">
 
             <label for="number">number</label>
             <input type="number" name="number" id="number">
-            
+
             <label for="date">date</label>
             <input type="date" name="date" id="date">
-            
+
             <label for="search">search</label>
             <input type="search" name="search" id="search">
-            
+
             <label for="color">color</label>
             <input type="color" name="color" id="color">
-            
+
             <label for="time">time</label>
             <input type="time" name="time" id="time">
             <!-- questo di input crea un pulsante per inviare al backend le informazioni raccolte nel form -->
