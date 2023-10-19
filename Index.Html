@@ -11,7 +11,7 @@ Solitamente vengono forniti in coppia: uno di apertura (es: <head>) e uno di chi
     <!-- il tag <head> rappresenta le informazioni su una pagina web e sono informazioni non visibili nella parte grafica del sito.
 Molti dei dati che sono all'interno di questa sezione possono essere collegamenti a script, a fogli di stile CSS-->
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="50">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- il tag <title> serve per dare il titolo al sito web -->
     <!-- la differenza tra il tag e l'elemento è che l'elemento è cio che si trova tra il tag di apertura e quello di chiusura  -->
@@ -35,13 +35,18 @@ questo attributo definisce il colore dello sgfondo della pagina web.
 N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori in esadecimale -->
 
 <body>
+    <div class="navbar" >
+
+    </div>
     <!-- l id è l'identificativo di una tag e si usa solo una volta,si richiama con l'ashtag nel foglio css
     la classe invece sono regole di css che si possono applicare a piu elementi,sii richiama con il punto. -->
     <div id="intro">
         <div class="bordo">
             <div>
-                <h1>Introduzione</h1>
-                <h2>Differenze tra Html, Css e Javascript</h2>
+                <header>
+                    <h1>Introduzione</h1>
+                    <h2>Differenze tra Html, Css e Javascript</h2>
+                </header>
                 <p>
                     <br>HTML, CSS, JavaScript sono linguaggi di programmazione web, cioè codici che servono a sviluppare
                     pagine
@@ -197,7 +202,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                             </ol>
                             </p>
                         </div>
-                        <div class="curiosità2">
+                        <div class="curiosità">
                             <h4 class="info"><big><b>Curiosità Tecniche</b></big></h4>
                             <p>
                                 <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px  alt=" lente di
@@ -253,7 +258,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                     Html di base </li>
                 <li>fa sapere al browser web del visitatore che si tratta di un documeto html5.</li>
             </ol>
-            <div class="curiosità2">
+            <div class="curiosità">
                 <h4 class="info"><big><b>Curiosità Tecniche</b></big></h4>
                 <p>
                     <img alt="lente d'ingradimento" src="/Media/lente di ingradimento.jpg" weight="30px" width="30px"
@@ -288,7 +293,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                         </li>
                 </p>
             </div>
-            <div class="curiosità2">
+            <div class="curiosità">
                 <h4 class="info"><big><b>Curiosità Tecniche</b></big></h4>
                 <p>
                     <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px" alt="lente d'ingradimento">
@@ -543,7 +548,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                                     <td class="td">Specificano un nome per il metadata</td>
                                 </tr>
                             </table>
-                            <div class="curiosità2">
+                            <div class="curiosità">
                                 <p>
                                     <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px"
                                         alt="lente d'ingradimento" class="photo" title="Piu esempi">
@@ -647,7 +652,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                                     <td class="td">specifica il media type di uno script</td>
                                 </tr>
                             </table>
-                            <div class="curiosità2">
+                            <div class="curiosità">
                                 <p>
                                     <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px"
                                         alt="lente d'ingradimento" class="photo" title="Piu esempi">
@@ -773,6 +778,18 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
             </ol>
         </div>
     </div>
+    <div id="content">
+        <div class="cardcontainer">
+            <div class="card"><h1>1</h1></div>
+            <div class="card"><h1>2</h1></div>
+            <div class="card"><h1>3</h1></div>
+            <div class="card"><h1>4</h1></div>
+            <div class="card"><h1>5</h1></div>
+            <div class="card"><h1>6</h1></div>
+            <div class="card"><h1>7</h1></div>
+            <div class="card"><h1>8</h1></div>
+        </div>
+    </div>
     <!-- il tag audio serve per inserire un file audio (mp3 o wav).
     Gli atrtributi controls, autoplay, etc. sono attributi booleani (boolean attribute):
     questi attributi servono ad indicare i parametri di vero o falso (on, off) e per impostare questi parametri basta semplicemte non scrivere l'attributo
@@ -886,24 +903,24 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
         Un altro attributo è bgcolor; con esso posso decidere il colore di tutta la tabella(se messo all'interno del tag table) 
         oppure il colore della riga (se messo all'interno del tag tr)
         o della singola cella (se posto all'interno dei tag th e td)-->
-        <table bgcolor="black" border="2" cellspacing="5" cellpadding="10">
+        <table >
             <!-- l'attributo align fa in modo che gli elementi all'interno delle celle si allineano al centro, sinistra o destra  -->
-            <tr bgcolor="red" align="center">
+            <tr >
                 <th>divinità</th>
                 <th>primo attributo</th>
                 <th>secondo attributo</th>
             </tr>
-            <tr bgcolor="lightred" align="center">
+            <tr >
                 <th>dio</th>
                 <td>Porco</td>
                 <td>schifoso</td>
             </tr>
-            <tr bgcolor="lightblue" align="center">
+            <tr >
                 <th>la madonna</th>
                 <td>porca</td>
                 <td>lurida</td>
             </tr>
-            <tr bgcolor="yellow" align="center">
+            <tr >
                 <th>padre pio</th>
                 <td>marmaldo</td>
             </tr>
@@ -911,18 +928,18 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
         <!-- L'attributo witdh è utile quando ho la necessità di far in modo che le celle della tabella abbiano tutte la stessa larghezza
             N.B. L'attributo witdh posto all'interno del tag di apertura table è la larghezza di ciascuna cella moltiplicata per il numero di celle
             (es: ogni cella ha una larghezza di 100px, le celle in totale sono 8 ergo il numero di px totale è di 800)-->
-        <table border="8" bgcolor="grey" width="800" cellspacing="4" cellpading="6">
-            <tr bgcolor="lightgrey" align="center">
-                <th width="100">domenica</th>
-                <th width="100">lunedi</th>
-                <th width="100">martedi</th>
-                <th width="100">mercoledi</th>
-                <th width="100">giovedi</th>
-                <th width="100">venerdi</th>
-                <th width="100">sabato</th>
-                <th width="100">domenica</th>
+        <table >
+            <tr >
+                <th>domenica</th>
+                <th>lunedi</th>
+                <th>martedi</th>
+                <th>mercoledi</th>
+                <th>giovedi</th>
+                <th>venerdi</th>
+                <th>sabato</th>
+                <th>domenica</th>
             </tr>
-            <tr bgcolor="purple" align="center">
+            <tr >
                 <td>9:30</td>
                 <td>9 - 22</td>
                 <td>9 - 23</td>
@@ -932,7 +949,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 <td>14:40 - 00: 55</td>
                 <td>13:12</td>
             </tr>
-            <tr bgcolor="blue" align="center">
+            <tr >
                 <td>bestemmiare dio</td>
                 <td>bestemmiare San Francesco</td>
                 <td>bestemmiare Padre pio</td>

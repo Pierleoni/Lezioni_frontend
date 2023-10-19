@@ -12,17 +12,26 @@ prima apri una regola  usando il selettore :root che specifica le regole per O G
 poi specifichi un nome per la variabile e ne specifichi il valore. Per utilizzarla nelle varei regole si userà var(--nomevariabile).*/
 :root {
     --bright: #eff;
-    --title: #bbc;
-    --dark: #001;
+    --title: #abc;
+    --dark: #012;
+    --darkac: #123;
     --grey: rgb(106, 106, 112);
     --green: #0a2;
-    --tablebgcolor: #abc;
-    --tablecolor: #001;
     --thcolor: #f00;
+    --fdlx: linear-gradient(to left, var(--title), rgba(170, 187, 204, 0.5));
+    --fdrx: linear-gradient(to right, var(--title), rgba(170, 187, 204, 0.5));
+    --fdbg: radial-gradient(farthest-side at 50%, #2c5364, #203a43, #0f2027);
 }
 
+/*  */
 html {
     font-family: 'Comfortaa', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -73,6 +82,7 @@ mark {
     padding: 1rem;
     border: 5px solid var(--title);
     border-radius: 10px;
+    background-image: var(--fdbg)
 }
 
 .bordo {
@@ -82,30 +92,28 @@ mark {
     border-radius: 10px;
 }
 
-.photo{
+.photo {
     text-align: right;
 }
-.info{
+
+.info {
     text-align: center;
     color: #f00;
-    
+
 
 }
 
 .curiosità {
-    margin: 0.5;
-    padding: 0.5;
-    background-color: var(--grey);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background: var(--fdlx);
     color: var(--dark);
     border-radius: 10px;
 }
 
-.curiosità2 {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    background-color: var(--grey);  
-    color: var(--dark);
-    border-radius: 10px;
+.curiosità:nth-child(even) {
+    background: var(--fdrx);
+
 }
 
 /* Quando voglio fare lo stile di una tabella sul foglio CSS devo dare la classe 
@@ -120,21 +128,101 @@ le proprietà sono le seguenti:
 5)padding=space padding su html
 6)text-align= align su html
 7)border-collapse: fa in modo che non si creino doppi bordi, e con la prorietà collapse fara collassare i bordi in un solo bordo della tabella  */
-.tabella,th,td {
-    background-color: var(--tablebgcolor);
-    color: var(--tablecolor);
+table,
+th,
+td {
+    background-color: var(--title);
+    color: var(--dark);
     border: 2px solid black;
     border-collapse: collapse;
     border-radius: 20px;
     text-align: left;
-    
+
 }
-.th{
+
+table {
+    width: 90%;
+}
+
+.th {
     color: var(--thcolor);
 }
-.th,td{
-    padding: 10px;  
+
+.th,
+td {
+    padding: 10px;
 }
-td{
-    color: #001;    
+
+td {
+    color: #001;
 }
+
+.navbar {
+    height: 4rem;
+    background: var(--fdbg);
+    top: 0;
+    position: sticky;
+    width: 100%;
+}
+.card{
+    background: var(--fdlx);
+    border: dotted var(--title);
+    height: 20rem;
+    width: 15rem;
+    border-radius: 1em;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card h1{
+    color: var(--darkac);
+}
+/* per selezionare il primo elemento di una classe */
+.card:nth-child(1){
+    background:var(--fdrx); 
+}
+/* per selezionare l'ultimo elemento di una classe */
+.card:last-child{
+    background:var(--fdrx);
+}
+/* per richiamare tutti gli elemnti pari in un elenco corrispondente a una classe: */
+.card:nth-child(even){
+    height: 17rem;
+}
+/* per selzionare i multpli di 3 ricihamare */
+.card:nth-child(3n+0){
+    height: 15rem;
+}
+
+.cardcontainer{
+    background: var(--fdbg);
+    height: 50rem;
+    display: flex;
+    border: solid 1px var(--bright);
+    border-radius: 10px;
+    /* flex-direction: column-reverse;
+    flex-wrap: wrap; */
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: flex-start;
+    gap: 2rem;
+    row-gap: 5rem;
+    column-gap: 20rem;
+    gap: 1rem 2rem;
+}
+
+/*le prorpietà left,bottom,top, right sposto la posizione dell'elemento html dove voglio nella viewport 
+le posizioni di css sono varie possono essere relative al contenuto ed ecc. 
+absolute: si sovrapone agli elementi della pagina 
+relative: è relativo al contentitore che lo contiene cioè al parente piu vicino perchè in questo caso è relativo al tag che lo contiene
+fixed: lo fissa in un punto della viewport,
+sticky: lo tiene fermo in un punto finchè non si scrolla e una volta che si inizia a scrollare lo tiene fermo alla viewport.
+Flexbox:
+ti dispone dinamicamente i contentuti di un elemento
+per wrappare le card bisogna dargli una height senno non li wrappera
+LA differenza tra align-items e align content è che content si considera tutta l'area della flexbox mentre items è per disporre gli elementi della flexbox
+per richiamare tutti gli elementi inclusi in una classe si scrive  
+es.(tutti gli elementi h1 della classe .card)
+.card h1{...}; */
