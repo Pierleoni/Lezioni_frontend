@@ -11,10 +11,11 @@ Solitamente vengono forniti in coppia: uno di apertura (es: <head>) e uno di chi
     <!-- il tag <head> rappresenta le informazioni su una pagina web e sono informazioni non visibili nella parte grafica del sito.
 Molti dei dati che sono all'interno di questa sezione possono essere collegamenti a script, a fogli di stile CSS-->
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="30">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- il tag <title> serve per dare il titolo al sito web -->
-    <!-- la differenza tra il tag e l'elemento è che l'elemeto è cio che si trova tra il tag di apertura e quello di chiusura  -->
-    <title>Ziapina</title>
+    <!-- la differenza tra il tag e l'elemento è che l'elemento è cio che si trova tra il tag di apertura e quello di chiusura  -->
+    <title>Appunti Htlm5 e CSS</title>
     <link rel="stylesheet" href="/style.css">
 
 </head>
@@ -34,15 +35,655 @@ questo attributo definisce il colore dello sgfondo della pagina web.
 N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori in esadecimale -->
 
 <body>
-    
+    <!-- l id è l'identificativo di una tag e si usa solo una volta,si richiama con l'ashtag nel foglio css
+    la classe invece sono regole di css che si possono applicare a piu elementi,sii richiama con il punto. -->
     <div id="intro">
-        <div class="intro">
-    
-            <h1>Schiesse Got</h1>
+        <div class="bordo">
+            <div>
+                <h1>Introduzione</h1>
+                <h2>Differenze tra Html, Css e Javascript</h2>
+                <p>
+                    <br>HTML, CSS, JavaScript sono linguaggi di programmazione web, cioè codici che servono a sviluppare
+                    pagine
+                    web.
+                    <br>Conoscere questi tre linguaggi base è fondamentale per Web developers e per chi si occuppa di
+                    web marketing.
+                    <br>Quindi HTML, CSS e JavaScript servono a programmare applicazioni web accessibili e fruibili
+                    attraverso un network come la rete internet in un'architettura di tipo client-server(Un sistema
+                    basato su un archittetura di rete formata da due tipi di moduli:
+                <ul dir="ltr">
+                    <li>il client</li>
+                    <li>il server </li>
+                    che generalmente sono eseguiti su macchine diverse collegate in rete).
+                </ul>
+                Quindi possiamo dire che HTML, CSS e JavaScript sono tre dei principali linguaggi del web lato client.
+                Moltissime pagine web vengono create con questi codici. Sono molto diffusi anche perché sono abbastanza
+                semplici e versatili.
+                <br>Tra questi tre il codice Html è quello piu importante perchè costituisce la base sui cui si
+                svillupano CSS e JS, tuttavia JavaScript è un vero e prorio linguaggio di programmazione mentre Html e
+                CSS sono linguaggi di markup, cioe formattatori di testo perchè utilizzano i cosidetti marcatori (< e>)
+                    per caratterizzare detemrinate parole chiave o anche detti Tag.
+                    <br>Andiamo a vederli ennlo specifico partendo prorio da Html:
+                    <ol>
+                        <li><b>HTML(Hyper Text Mark-Up Language) :</b>
+                            Questo linguaggio, ad oggi nella versione 5, definisce il significato(la struttura
+                            semantica) di una pagina web, cioè il contenuto effettivo della pagina.
+                            <br>Quindi viene usato per descrivivere i documenti e i contenuti ipertestuali, ovvero
+                            testuali e non, disponibili nel Web.
+                            Tradotto in parole povere attraverso il linguaggio Html si crea il testo scritto, elenchi
+                            puntati,immaggini, link e video.
+                            <br>N.B. Tuttavia non si può assegnare uno stile grafico,fatta eccezzione per il text
+                            formatting(cioe
+                            il testo in grasetto, corsivo, sottolineato, evidenziato & Co.), difatti l'Html non si
+                            occuppa dello stile e della parte grafica.
+                        </li>
+                        <div class="curiosità">
+                            <h4 class="info"><big><b>Curiosità Storiche</b></big></h4>
+                            <p>
+                                <img src="/Media/triggered Barbero.jpg" weight="10%" width="10%" alt="triggered Barbero"
+                                    class="photo">
+                                <br>Il linguaggio Html fu creato da Sir Tim Bernes-Lee nel 1991 ma fu rilasciato
+                                alle
+                                masse solo nel 1993, fu allora che usci l'HTML1 il cui scopo iniziale era quello di
+                                condividere i dati attraverso i browser web. Tuttavia la crescita di questo
+                                linguaggio si arresto poco dopo il suo rilascio poichè all'epoca non erano molte le
+                                persone che sviluppavano siti web.
+                                <br>Nel 1995 fu rilasciato l'HTML2 con ulteriori caratteristiche, che lo resero il
+                                linguaggio di markup standard per il web design fino al 1997.
+                                <br>Nello stesso periodo Dave Raggett svilluppò l'HTML3: offriva ai webmaster
+                                carratteristiche più performanti nella progettazione delle pagine, tuttavia le
+                                caratteristiche di quet'ultimo rallentavano i browser poichè non erano in grado di
+                                applicarle.
+                                <br>Nell 1999 fu svilluppato l'HTML4.01 che fu dotato del supporto per le ozioni
+                                multimediali ed inoltre, questo aggiornamento, includeva anche fogli di stile,
+                                funzioni di stampa e linguaggi di scripting aggiuntivi.
+                                <br>Nel 2015 fu rilasciato l'HTML5 in cui è stato aggiunto un maggiore supporto per
+                                l'archiviazione multimediale ed elementi di contenuto specifici. Anche il doctype
+                                inline, l'incorporamento di audio e video sono stati semplificati.
+                                <br>Nel 2022 L'hTML5 viene aggiornato alla versione 5.2 che migliora la politica di
+                                sicurezza dei contenuti.
+                                Inoltre, si concentra sull'eCommerce, aggiungendo un'API per le richieste di
+                                pagamento. Questo aggiornamento ha anche aggiunto applicazioni internet accessibili
+                                e ricche di contenuti per le persone disabili.
+                            </p>
+                        </div>
+                        <li><b>CSS (Cascading Style Sheets) :</b>
+                            Se il linguaggio HTml definisce l'ipertesto della pagina web, CSS definisce lo stile e la
+                            parte grafica del sito.
+                            <br>Ergo questo linguaggio viene usato per definire la formattazzione di documenti Html(siti
+                            web e relative pagine), quindi lo si usa per curare lo stile assegnando i colori, il design,
+                            il layout e il posizionamento degli elementi all'interno di una pagina Web o delle pagine di
+                            un sito. Ma si determinano anche le variazioni di visualizzazioni e dimensioni per i vari
+                            dispositivi.
+                            <br>Quindi i CSS sono un insieme di modificatori di prorietà come dimensione, posizione,
+                            colore ed etc.
+                            <br>Ogni modificatore viene applicato a specifici elementi della pagina web, identificati
+                            attraverso l'uso dei selettori. Ad esempio:
+                            .commento { width: 100px; }
+                            <div class="curiosità">
+                                <h4 class="info"><big><b>Curiosità Storiche</b></big></h4>
+                                <p>
+                                    <img src="/Media/triggered Barbero.jpg" weight="10%" width="10%"
+                                        alt="triggered Barbero" class="photo">
+                                    <br>L'ideazone di CSS si lega in maniera diretta con Htlm; in qualche modo è un
+                                    complemento all'idea di separare il contenuto dalla presentazione.
+                                    All'epoca, come ad oggi, HTML è un linguaggio strutturale senza informazioni
+                                    grafiche o di stile sulla presentazione del documento, di consequenza era
+                                    necessario avere un linguaggio che si occuppasse dell'aspetto visuale della
+                                    pagina.
+                                    <br>Nel 1996 nascono ufficcialmente i CSS level 1 (CSS1) anche se la loro
+                                    realizzazione
+                                    risale già al 1993.
+                                    <br>Nel 1998 viene rilasciata la versione 2 di CSS la quale conteneva anche
+                                    prorpietà per il posizionamento degli elementi in una pagina e la possibilità di
+                                    definire stili per altri media (stampanti, dispositivi manuali e uditivi), oltre
+                                    a un approfondimento delle proprietà già presenti.
+                                    <br>NEl 2004 la CSS level 2 ha la prima revisione (diventa CSS2.1) che contiene
+                                    alcuni aggiornamenti rispetto alla versione precedente facendolo diventare una
+                                    Recommendation definitiva nel 2011.
+                                    <br>Ad oggi la versione usata è i CSS level 3 (CSS3)
+                                </p>
+                            </div>
+                        </li>
+                        <li><b>JavaScript :</b>
+                            JavaScript è un linguaggio di scripting orientato agli oggetti e comunemente usato nei siti
+                            web perché permette di integrare le varie pagine con link, mappe e altri elementi che si
+                            aggiornano automaticamente. Viene utilizzato per rendere dinamiche le pagine che altrimenti
+                            sarebbero statiche: stabilisce quindi il comportamento delle pagine a seconda dell'azione da
+                            parte dell'utente, come il click di un pulsante, la compilazione di form, eccetera.
+                            Come CSS, anche JavaScript fa riferimento al linguaggio HTML.</li>
+                        <div class="curiosità">
+                            <h4 class="info"><big><b>Curiosità Storiche</b></big></h4>
+                            <p>
+                                <img src="/Media/triggered Barbero.jpg" weight="10%" width="10%" alt="triggered Barbero"
+                                    class="photo">
+                                <br>Javascript fu ideato da Brendan Eich nel <ins>1995</ins> quando lavorava per la
+                                Netscape
+                                Communications Corporation, e all'inizio chiama questo nuovo linguaggio Livescript
+                                per
+                                via della sua dinamicità e vivacità.
+                                <br>All'epoca questa compagnia deteneva il primato come
+                                inventore di un browser utilizzato da tutti gli utenti in rete (Netscape) e voleva
+                                dotarlo di di un linguaggio di scripting che permettesse ai web designer di
+                                interagire
+                                con i diversi oggetti della pagina (immagini, form, link, ecc.), ma soprattutto con
+                                le
+                                applet Java (programmi che permettono di interagire con l'utente).
+                                <br>Sempre nello stesso periodo la Netscape Communications Corporation aveva stretto
+                                una
+                                partnership con Microsystem (ideatrice di java) cosi il <ins>4 dicembre 1995</ins>
+                                entrambe le compagnie rilasciarono questo linguaggio, per il browser Netscape 2.0,
+                                descrivendolo come "complementare a
+                                HTML e a Java"(Dopo un po la Netscape cambio nome di Livescript in JavaScript in
+                                onore
+                                di Java).
+                                <br>La Microsoft, loro rivale sul mercato, rispose in due modi:
+                            <ol>
+                                <li>
+                                    con l'introduzione di VBScript all'interno di Internet Explorer 3
+                                </li>
+                                <li>
+                                    con una propria versione di JavaScript, sotto molti aspetti simile
+                                    all'originale,
+                                    chiamata JScript (siamo nel luglio 1996)supportata per Microsoft Explorer,
+                                    causando
+                                    cosi problemi di compatibilità tra i browser.
+                                </li>
+                                A causa di queste differenze nel novembre del 1996, la Netscape e Sun si affidarno
+                                all'ECMA (European Computer
+                                Manufacturers Association) che standardizzo Javascript nel 1997 e nel 1998 la
+                                standardizzazzione venne accettata anche da ISO (International Organization for
+                                Standardization).
+                            </ol>
+                            </p>
+                        </div>
+                        <div class="curiosità2">
+                            <h4 class="info"><big><b>Curiosità Tecniche</b></big></h4>
+                            <p>
+                                <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px  alt=" lente di
+                                    ingrandimento" class="photo">
+                                <br>ECMAScript è figlio di JavaScript, difatti oggi quando si dice JavaScript,
+                                JScript
+                                ed ECMAscript sostanzialmente si indicano tre varietà dello stesso linguaggio.
+                            </p>
+                        </div>
+                    </ol>
+                    </p>
+            </div>
+            <h1>Fundametals</h1>
             <p>
-        
-                il tag body è cio che vogliamo far vedere all'utente che visita il sito e all'interno di questo tag si inserisco
-                tutti quei blocchi che andranno a comporre il sito, il tag h1/2/3/etc.(fino al h6) è il tag di intestazione
+                Su visual code per far in modo che il software capisca che stiamo scrivendo un codice HTML5 dobbiamo
+                dichiararlo attraverso la dichiarazione -!DOCTYPE html-.
+                <br> Tutti i documenti HTML5 devono inizare con questa dichiarazione che serve per identificare la
+                versione del linguaggio HTML che stiamo utilizzando. Quindi grazie a questo tag è possibile capire
+                subito con quale tipo di documento si ha a che fare, nel caso manchi dal documento si possono verificare
+                errori nella presentazione del sito web.
+                <br>In questa dichiarazione viene indicato quale linguaggio e quale versione sono utilizzati nel codice
+                successivo, ergo definisce il tipo di documento e quindi indica la specifica utilizzata, individuando
+                cosi quali elementi, attributi possono essere presenti.
+                <br>In sostanza il <i>doctype</i> permette a un dispositivo di identificare le regole usate per scrivere
+                il documento e di visuallizzarle appropriamente.
+                <br>Difatti il doctype non è una caratteristica unica ed esclusiva di HTML ma riguarda anche altri
+                linguaggi (XHTML, MathML, SVG ed XML). Nel caso specifico del linguaggio che interessa a noi, il doctype
+                indica al
+                browser che una pagina web è scritta secondo le regole HTML e di conseguenza indica al browser come
+                effettuare il rendering in maniera corretta.
+                <br>Rispetto alle versioni precedenti di HTML il doctype non è più basato su SMGL, percio non richiede
+                maiuscole o minuscole.
+                <br>Questa dichiarazione deve essere collocata al di fuori del tag -html-, nella prima riga del
+                documento HTML.
+                <br>!!!N.B. la dichiarazione non è un tag HTML ma è un informazione per il browser su quale tipo di
+                documento aspettarsi. !!!
+                <br>il DOCTYPE viene supportato da piu browser che sono:
+            <ul>
+                <li>Google Chrome (Windows, Mac, Linux, Android)</li>
+                <li>Microsoft Edge (Windows 10; 8; 8.1; 7, MacOS 10.12 & Later, Linux)</li>
+                <li>Firefox (Android, iOS 8.2, Linux, Windows 10;11 )</li>
+                <li>Safari(iOS, iPadOS, macOS) </li>
+                <li>Android</li>
+            </ul>
+            <br>Ricapitolando questo tipo di dichiarazione ha più funzioni:
+            <ol>
+                <li>Deve essere scritto nella prima riga dell'editor</li>
+                <li>Deve essere collocata al di fuori del tag -html-</li>
+                <li>definisce il tipo di documento con cui si sta lavorando ed il tipo di linguaggio usato </li>
+                <li>Permette a un dispositivo di identificare le regole usate per scrivere
+                    il documento e di visuallizzarle appropriamente </li>
+                <li>tutti i documenti Html devono iniziare con questa dichiarazione per essere conforme agli standard
+                    Html di base </li>
+                <li>fa sapere al browser web del visitatore che si tratta di un documeto html5.</li>
+            </ol>
+            <div class="curiosità2">
+                <h4 class="info"><big><b>Curiosità Tecniche</b></big></h4>
+                <p>
+                    <img alt="lente d'ingradimento" src="/Media/lente di ingradimento.jpg" weight="30px" width="30px"
+                        class="photo">
+                    <br> I tag sono parole chiave che ci consentono di scrivere un documento Html organizzandolo in
+                    una
+                    struttura logico-gerarchica per organizzare la visualizzazione dei contentuti ipertestuali sullo
+                    schermo del browser.
+                    <br>I tag non verrano mai visualizzati dall'utente sul prorio monitor, ma potrà
+                    vedere i loro effetti poicè il browser li interpreta e li apllica.
+                    Vengono messi tra le parentesi angolari (es:
+                    <>) e ne esistono di 2 tipi:
+                        <ul></ul>
+                        <li><b>Tag di coppia:</b>
+                            Solitamente vengono forniti in coppia;
+                            uno di apertura (es: <>) e uno di chiusura(es:</>).
+                            La loro funzione viene applicata a tutto cio che è compreso tra l'apertura e la
+                            chiusura.
+                            Il tag di chiusura è caraterrizato dalla presenza di una sbarra che precede il nome del
+                            tag
+                            stesso.
+                            <br>N.B. per ragioni di retrocompatibile è oppurtuno anteporre uno spazio prima della
+                            sbarra.
+                        </li>
+                        <li><b>Tag Unici:</b>
+                            questi tag consentono di effettuare particolari operazioni sul documento HTML che non
+                            richiedono la delimitazione del testo; ad esempio con il tag br è sufficiente indicare
+                            in quale punto del testo lo si voglia mandare accappo.
+                            <br>
+                            <br>Per cui, in questo ed altri casi, il/i tag sono unici è del tutto inutile averne uno
+                            di chiusura.
+                        </li>
+                </p>
+            </div>
+            <div class="curiosità2">
+                <h4 class="info"><big><b>Curiosità Tecniche</b></big></h4>
+                <p>
+                    <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px" alt="lente d'ingradimento">
+                    <br>Come già detto alcuni tag vanno in coppia, quindi In pratica i tag sono dei contenitori di
+                    un
+                    testo che sta al loro interno.
+                    <br><ins>L'insieme di tag iniziale, contenuto e tag finale è detto elemento HTML.</ins>
+                    La loro sintassi è la seguente:
+                    <img src="/Media/sintassi elemento html.png" alt="sintassi elemento Html"
+                        title="esempio della Sintassi di un elemento HTML ">
+                    <br>Questo tipo di elemento, con un tag iniziale (o di apertura), del contenuto e un tag finale
+                    (o di chiusura), costituisce il tipo più comune di elemento e viene detto elemento contenitore.
+                    <br><img src="/Media/le parti di un elemento contentitore di HTML.png"
+                        alt="le parti di un elemento contentitore di HTML" weight="400px" width="300px"
+                        title="le parti di un elemento contentitore di HTML">
+                    Quindi gli elementi sono identificati dai tag nel sorgente del testo. Un tag è costituito dal
+                    nome dell'elemento (di solito l'abbreviazione di un nome più descrittivo) tra parentesi angolari
+                    (<>). Il browser sa che qualsiasi testo tra parentesi va nascosto e non visualizzato nella
+                        finestra del browser.
+                        <br>Quindi il nome dell'elemento viene visualizzato nel tag di apertura (detto start tag)
+                        e di nuovo nel tag di chiusura (o end tag) preceduto dallo slash (/).
+                        <br>Il tag di chiusura funziona qualcosa come un interruttore “off” per l'elemento.
+                        N.B.Porre molta attenzione a non utilizzare il carattere simile, cioè il backslash,
+                        (\) nel tag finale.
+                        <br>I tag aggiunti intorno ai contenuti sono indicati come markup.
+                        Tuttavia non tutti gli elementi viaggiano in coppia e non tutti gli elementi hanno un
+                        contentuto, alcuni sono vuoti per definizione, come già accenato nello specchietto
+                        riguardante i tag appena sopra (ad esmepio il tag img che è quello per
+                        inserire un immagine o il tag br).
+                        Questi elementi vuoti (detti anche void nella temrinologia W3C o standalone o empty in
+                        alcuni casi ) non hanno contenuto al loro interno: non formattano del conentuto ma servono
+                        solo a dare una direttiva. Come detto sopra non vanno in coppia ma sono elementi singoli:
+                        non vi è nessuna possbilita di inserivi un testo.
+                </p>
+            </div>
+            <br> Dopo aver fatto la dichiarazione iniziale si deve necessariamente scrivere un altro tag che vada ad
+            indicare la struttra del documento e l'inizio della parte del codice che verra espressa secondo il
+            linguaggio definito nel tag.
+            <br> Quindi nella riga sottostante il doctype andrà scritto il tag html che serve a delimitare lo
+            spazio al cui interno verra scritto il codice, usando per l'appunto il linguaggio Html.
+            <br>Questo Tag rappresenta la radice di un documento HTML; è un contenitore dentro il quale si scrive tutte
+            gli elementi di HTML (fatta eccezzione per il -!DOCTYPE- tag!).
+            <br>Questo Tag a vari attributi che sono:
+            <ol>
+                <li>Lang: specifica quale lingua è stata adottata nel documento HTMl (it per l'italiano, fr per il
+                    francese, en per l'inglese,etc.) </li>
+                <li>Dir: è l'attributo che indica la direzione del testo da sinistra a destra (LTR) e da destra a
+                    sinistra (RTL) </li>
+            </ol>
+            Quindi tutti gli altri tag del linguaggio sono contenuti al suo interno, in particolar modo nelle due macro
+            sezioni: Head e Body.
+            <ul>
+                <li>Il tag Head rappresenta le informazioni su una pagina web e sono
+                    informazioni non visibili nella parte grafica del sito.
+                    <br>Definisce la testata del file Html ed è un contenitore per tutte le informazioni relative al
+                    funzionamento della pagina web.
+                    <br>è quindi un contenitore per i metadati che riguardano il documento Html, ma come anticipato
+                    prima, non
+                    vengono visualizzati.
+                    Ma cosa sono i metadati?:
+                    <br>sono dei dati relativi ad altri dati, in questo caso definiscono il titulo del documento, il set
+                    dei
+                    caratteri, gli stili, gli script e le altre meta informazioni.
+                    Gli elementi che possono essere inseriti nel head sono:
+                    <ol>
+                        <li><i><ins>title :</ins></i> definisce il titolo del documento (richiesto nei documenti HTML!)
+                            <br>fornisce alla pagina un titolo quando viene aggiunto ai preferiti
+                            <br>Visualizza un titolo per la pagina nei risultati del motore di ricerca
+                        </li>
+                        <li><i><ins>style :</ins></i>
+                            Questo tag definisce gli stili grafici CSS del documento HTML e ogni documento può contenere
+                            più tag style. Quindi il tag style è l'elemento che specifica come gli elementi html devono
+                            essere visualizzati nel browser.
+                            <br>Ergo lo si utilizza per incorporare i CSS direttamente nel
+                            documento, senza dover collegare un foglio di stile esterno. Nonostante possa sembrare una
+                            soluzione comoda, è consigliabile utilizzare i fogli di stile esterni per centralizzare le
+                            modifiche e garantire il disaccoppiamento tra contenuto ed estetica.
+                        </li>
+                        <table class="tabella">
+                            <tr>
+                                <th class="th">Attributo</th>
+                                <th class="th">valore</th>
+                                <th class="th">descrizione</th>
+                            </tr>
+                            <tr>
+                                <td class="td">media</td>
+                                <td class="td">media_query</td>
+                                <td class="td">Specifica per quale media/device le risorse dei media sono ottimizzate
+                                </td>
+                            <tr>
+                                <td class="td">type</td>
+                                <td class="td">text/css</td>
+                                <td class="td">specifica il tipo di media relativo al tag style</td>
+                            </tr>
+                            </tr>
+                        </table>
+                        <li><i><ins> base :</ins></i>
+                            Il tag base specifica l'URL di base e/o il target relativo a tutti gli URLs in un documento
+                            <br>Questo Tag deve necessariamente avere o un href o un attributo target presenti, o
+                            entrambi
+                        </li>
+                        <table class="tabella">
+                            <tr>
+                                <th class="th">Attributo</th>
+                                <th class="th">valore</th>
+                                <th class="th">descrizione</th>
+                            </tr>
+                            <tr>
+                                <td class="td">href</td>
+                                <td class="td">URL</td>
+                                <td class="td">specifica l'URL di base relativo a tutti gli URLs nella pagina </td>
+                            <tr>
+                                <td class="td">target</td>
+                                <td class="td">_blank
+                                    <br>_parent
+                                    <br>_self
+                                    <br>_top
+                                </td>
+                                <td class="td">specifica il target di default per tutti gli hyperlinks e i forms nella
+                                    pagina</td>
+                            </tr>
+                            </tr>
+                        </table>
+                        <li><i><ins>link :</ins></i>
+                            Questo elemento definisce la relazione tra il documento corrente e quello esterno.
+                            In parole povere questo tag alcune volte viene usato per linkare i fogli di stile
+                            esterni(come ad esempio un foglio CSS).
+                            Questo elemento è un elemento vuoto, contiene solo gli attributi. </li>
+                        <table class="tabella">
+                            <th class="th">Attributo</th>
+                            <th class="th">valore</th>
+                            <th class="th">descrizione</th>
+                            </tr>
+                            <tr>
+                                <td class="td">crossorigin</td>
+                                <td class="td">anonymous use-credentials</td>
+                                <td class="td">specifica come l'elemento si aggrappa(?) all'istanza/richiesta(?)
+                                    dell'origine incrociata</td>
+                            <tr>
+                                <td class="td">href</td>
+                                <td class="td">URL</td>
+                                <td class="td">Specifica la locazione del documento linkato</td>
+                            </tr>
+                            <tr>
+                                <td class="td">hreflang</td>
+                                <td class="td">Language_code</td>
+                                <td class="td">specifica il linguaggio del testo nel documento linkato</td>
+                            </tr>
+                            <tr>
+                                <td class="td">media</td>
+                                <td class="td">media_query</td>
+                                <td class="td">specifica su che device il documento linkato verrà visualizzato</td>
+                            </tr>
+                            <tr>
+                                <td class="td">refferrerpolicy</td>
+                                <td class="td">noreferrer
+                                    <br>no refferer-when-downgrade
+                                    <br>origin
+                                    <br>origin-when-cross-origin
+                                    <br>unsafe-url
+                                </td>
+                                <td class="td">specifica quale referrer usare quando si recuperà la risorsa </td>
+                            </tr>
+                            <tr>
+                                <td class="td">rel </td>
+                                <td class="td">alternate
+                                    <br>author
+                                    <br>dns-prefetch
+                                    <br>help
+                                    <br>icon
+                                    <br>license
+                                    <br>next
+                                    <br>pingback
+                                    <br>preconnect
+                                    <br>perfecth
+                                    <br>preload
+                                    <br>prerender
+                                    <br>prev
+                                    <br>search
+                                    <br>stylesheet
+                                </td>
+                                <td class="td">Necessario. Specificano la relazione tra il documento corrente e quello
+                                    linkato </td>
+                            </tr>
+                            <tr>
+                                <td class="td">sizes</td>
+                                <td class="td">HeightxWidth any</td>
+                                <td class="td">Specifica la grandezza della risorsa linkata. Solo per rel="icon"</td>
+                            </tr>
+                            <tr>
+                                <td class="td">title</td>
+                                <td class="td"></td>
+                                <td class="td">definisce un preferito o un foglio di stile alternativo</td>
+                            </tr>
+                            <tr>
+                                <td class="td">type</td>
+                                <td class="td">media_type</td>
+                                <td class="td">Specifica il tipo di media del documento linkato</td>
+                            </tr>
+                        </table>
+                        <li><i><ins>meta : </ins></i>
+                            <br>questo tag definisce i metadata di un documento HTML. Va sempre inserito
+                            all'interno dell elemento head.
+                            <br>Sono tipicamente usati:
+                            <ol>
+                                <li>per specificare il set dei caratteri</li>
+                                <li>la descrizione della pagina </li>
+                                <li>parole chiave</li>
+                                <li>L'autore del documento</li>
+                                <li>I settings del viewport</li>
+                            </ol>
+                            I metadata non verrano visualizzati sulla pagina, ma vengono calcolati dal browser.
+                            <br>Difatti sono usati dai browser(come contenuti visualizzabili o per ricarice la pagina),
+                            motori di ricerca (keywords) e alti servizi web.
+                            <br>Ad esempio c'è un metodo che permette ai designer web di controllare oltre la
+                            viewport(cioè l'area visibile agli utenti di una pagina web).
+                            <table class="tabella">
+                                <th class="th">Attributo</th>
+                                <th class="th">valore</th>
+                                <th class="th">descrizione</th>
+                                </tr>
+                                <tr>
+                                    <td class="td">charset</td>
+                                    <td class="td">character_set</td>
+                                    <td class="td">Specifica il carattere dell'encoding per un documento HTML</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">content</td>
+                                    <td class="td">text</td>
+                                    <td class="td">Specifica il valore associato con il http-equiv o il nome
+                                        dell'attributo</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">http-equiv</td>
+                                    <td class="td">content-security-policy
+                                        <br>content-type
+                                        <br>default-style
+                                        <br>refresh
+                                    </td>
+                                    <td class="td"> Fornisce un HTTP header per l'informazione/valore del contentuto
+                                        dell'attributo</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">Name</td>
+                                    <td class="td">application-name
+                                        <br>author
+                                        <br>description
+                                        <br>generator
+                                        <br>keywords
+                                        <br>viewport
+                                    </td>
+                                    <td class="td">Specificano un nome per il metadata</td>
+                                </tr>
+                            </table>
+                            <div class="curiosità2">
+                                <p>
+                                    <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px"
+                                        alt="lente d'ingradimento" class="photo" title="Piu esempi">
+                                    <br><B>Definire una parola chiave per il motore di ricerca:</B>
+                                    <br>meta name="keywords" content="HTML, CSS, JavaScript"
+                                    <br><b>Definire una descrizione della pagina Web :</b>
+                                    <br>meta name="description" content="Free Web tutorials for HTML and CSS"
+                                    <br><b>Definire l'autore della pagina :</b>
+                                    <br>meta name="author" content="John Doe"
+                                    <br><b>Refreshare il documento ogni 30 secondi :</b>
+                                    <br>meta http-equiv="refresh" content="30"
+                                    <br><b>Settare la viewport per rendere il sito web facilmente visualizzabile su ogni
+                                        device : </b>
+                                    <br>meta name="viewport" content="width=device-width, initial-scale=1.0".
+                                    <br>
+                                    <br><b>Settare la viewport :</b>
+                                    <br><ins>come accenato sopra la viewport è l'area visibile, all'utente, della pagina
+                                        web.</ins>
+                                    Essa varia da dispositivo a dispositivo, può essere grande su PC ma non su telefono.
+                                    Per ovviare a questo problema bisogna includere questo elemento in tuttel le pagine
+                                    web:
+                                    <br>name="viewport" content="width=device-width, initial-scale=1.0"
+                                    <br>Questo metadata da le instruzioni al browser su come controllare le dimesioni e
+                                    il ridimensionamento della pagina.
+                                    <br>witdh=device-width setta la larghezza della pagina per seguire la
+                                    larghezza degli screen dei vari dispositivi.
+                                    <br>initial-scale= 1.0 setta il livello dello zoom iniziale quando la pagina è in
+                                    carica dal browser.
+                                </p>
+                            </div>
+                        <li><i><ins>script :</ins></i>
+                            <br>Questo tag è usato per incorporare uno script del client-side (Javascript)
+                            <br>Questo elemento contiene:
+                            <br><ins>i contenuti delle dichiarazioni dello scripting o indica a un script file esterno
+                                attraverso l'attributo src.</ins>
+                            <table class="tabella">
+
+                                <th class="th">Attributo</th>
+                                <th class="th">valore</th>
+                                <th class="th">descrizione</th>
+                                </tr>
+                                <tr>
+                                    <td class="td">async</td>
+                                    <td class="td">async</td>
+                                    <td class="td">Specica che lo script viene scaricato in parallelo all'analisi della
+                                        pagina, ed eseguito non appena è disponibile(prima che l'analisi sia completa).
+                                        <br>N.B. solo per gli script esterni.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">crossorigin</td>
+                                    <td class="td">anonymous
+                                        <br>use-credentials
+                                    </td>
+                                    <td class="td">setta la modalità della richiesta per una richiesta HTTP CORS</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">defer</td>
+                                    <td class="td">defer</td>
+                                    <td class="td">Specifica che lo script viene scaricato in parallello all'analisi
+                                        della pagina, ed eseguito dopo che la pagina ha concluso di analizzarlo</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">integrity</td>
+                                    <td class="td">filehash</td>
+                                    <td class="td">Permette a un browser di controllare lo script recuperato per
+                                        garantire che il codice non viene mai caricato se la sorgente è stata manipolata
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">nomodule</td>
+                                    <td class="td">True
+                                        <br>False
+                                    </td>
+                                    <td class="td">Specifica che lo script potrebbe non essere eseguito nei browser che
+                                        supportano i moduli ES2015(cioè la seconda maggiore revisione di Javascript)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">referrerpolicy</td>
+                                    <td class="td">no-refferrer
+                                        <br>no-refferrer-when-downgrade
+                                        <br>origin
+                                        <br>origin-when-cross-origin
+                                        <br>same-origin
+                                        <br>strict-origin
+                                        <br>strict-origin-when-cross-origin
+                                        <br>unsafe-url
+                                    </td>
+                                    <td class="td">Specifica quali informazioni sul referrer inviare quando si recupera
+                                        uno script</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">src</td>
+                                    <td class="td">URL</td>
+                                    <td class="td">Specifica l'URL di un script file esterno</td>
+                                </tr>
+                                <tr>
+                                    <td class="td">type</td>
+                                    <td class="td">scripttype</td>
+                                    <td class="td">specifica il media type di uno script</td>
+                                </tr>
+                            </table>
+                            <div class="curiosità2">
+                                <p>
+                                    <img src="/Media/lente di ingradimento.jpg" weight="30px" width="30px"
+                                        alt="lente d'ingradimento" class="photo" title="Piu esempi">
+                                    Il termine “Referrer” indica l'URL del sito da cui un utente proviene e che lo ha
+                                    indirizzato verso il sito che sta visitando.
+                                    <br>Questa informazione è fondamentale percapire da dove arrivano i visitatori e
+                                    come si sono comportati durante la navigazione.
+                                    <br>Tale dato può essere reperito attraverso i file di log del sito o da strumenti
+                                    di monitoraggio dei visitatori come Google Analytics, che consentono di analizzare
+                                    in modo dettagliato i flussi di traffico e le fonti di provenienza dei visitatori.
+                                    <br>Ad esempio, grazie ai dati sul Referrer è possibile comprendere quali sono i
+                                    siti
+                                    che conducono più utenti alla propria pagina e valutare l'efficacia di una
+                                    determinata campagna di marketing online.
+                                </p>
+                            </div>
+                        <li><i><ins>noscript :</ins></i>
+                            <br>definisce un contenuto alternativo che può essere visualizzato dagli utenti che hanno
+                            disabilitato gli script nei loro browser o hanno un browser che non supporta lo script
+                        </li>
+                </li>
+                </ol>
+                <br>
+                Molti dei dati che sono all'interno di questa sezione possono essere collegamenti a script, a fogli
+                di stile CSS.
+                <br>Dopodichè bisogna dare un titolo alla pagina web, il tag title (es: -title- appunti Htlm5 e CSS
+                -/title-) serve per dare il titolo al sito web.
+                <br>Dopo aver dato il titolo al sito web bisogna scrivere il contenuto di esso, ovvero il suo corpo, ciò
+                che gli darà una forma iniziale.
+                <br>Il tag body è cio che vogliamo far vedere all'utente che visita il sito e all'interno
+                in questo tag si inserisco tutti quei blocchi che andranno a comporre il sito.
+                <br>In sotanza possiamo dire che il tag body è un elemento che contiene tutti i contenuti di un
+                documento HTML, ad esempio le headings, i paragrafi, le immagini, gli hyperlinks, tabelle, liste, etc.
+
+            </ul>
+            <br>Il tag h1/2/3/etc.(fino al h6) è il tag di intestazione
             </p>
         </div>
         <div>
@@ -52,27 +693,31 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 <br>
                 <a href="https://www.google.com">tipo questo</a>
                 <br>
-                L'attributo href serve per creare un collegamento ipertestuale che mi porti ad esempio, come in questo caso, su
+                L'attributo href serve per creare un collegamento ipertestuale che mi porti ad esempio, come in questo
+                caso, su
                 Google o su altri motori di ricerca
             </p>
-    
         </div>
-        <div class="intro">
-    
+        <div class="bordo">
             <h2>Porca madonna</h2>
-            la tag p sono i paragrafi: cioe contentuti puramente testuale in cui puoi mettere link e tag di formattazione.
+            la tag p sono i paragrafi: cioe contentuti puramente testuale in cui puoi mettere link e tag di
+            formattazione.
+            <!-- il tag div serve è un contenitore per organnizare la pagina web e puo contenere qualisiasi tipo di tag (anche altri div) 
+            il div di per se non ha alcun effetto sulla visualizzazione almeno finche non gli vengono applicati regole di CSS -->
             <p>
-                in questo caso ho cambiato sia il colore di background per il paragrafo sia il colore stesso delle lettere
+                in questo caso ho cambiato sia il colore di background per il paragrafo sia il colore stesso delle
+                lettere
                 utilizzando 2 dei tre modi per mettere il colore
             </p>
         </div>
-        <div class="intro">
-        <p>
-            questa tag (cite), come tante altre (code, adress,em, etc.) sono tag pre-fomattate utili al discorimento per
-            accessibilità agli ipovedenti e tutto cio che non è utile al reich 
-        </p>
+        <div class="bordo">
+            <p>
+                questa tag (cite), come tante altre (code, adress,em, etc.) sono tag pre-fomattate utili al discorimento
+                per
+                accessibilità agli ipovedenti.
+            </p>
         </div>
-        <div class="intro">
+        <div class="bordo">
             <cite>Lorem </cite>
             <p>
                 questa tag(br) [curcio docet] serve a mandare accappo il testo
@@ -80,7 +725,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 N.B.!!Non necessitano di un tag di chiusura!!
         </div>
         </p>
-        <div class="intro">
+        <div class="bordo">
             <p>
                 Ci sono i tag che servono per la formattazione del testo e sono:
             </p>
@@ -89,15 +734,18 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                     <b> b (bold): definisce il testo in grasetto </b>
                 </li>
                 <li>
-                    <strong>strong</strong>: elemento che definisce il testo con una forte importanza, il contentuto dentro i tag viene
+                    <strong>strong</strong>: elemento che definisce il testo con una forte importanza, il contentuto
+                    dentro i tag viene
                     tipicamente visualizzato in grasetto
                 </li>
                 <li>
-                    <i>i</i> (italic): definisce il testo in corsivoù
+                    <i>i</i> (italic): definisce il testo in corsivo
                 </li>
                 <li>
-                    <em>em</em>(Emphasized): elemento che definisce il testo enfatizzato/sottolineato. Questo tag si usa per
-                    facilitare la lettura ad un ipovedente e cosi facendo il suo sreen reader pronuncera la/e parola/e con un
+                    <em>em</em>(Emphasized): elemento che definisce il testo enfatizzato/sottolineato. Questo tag si usa
+                    per
+                    facilitare la lettura ad un ipovedente e cosi facendo il suo sreen reader pronuncera la/e parola/e
+                    con un
                     enfasi, ponendo l'accento
                 </li>
                 <li>
@@ -107,12 +755,13 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                     <mark>mark</mark> definisce il testo sottolineato
                 </li>
                 <li>
-                    <del>del</del>(deleted): definisce il testo o la parola che deve essere cancellatta dal documento, viene
+                    <del>del</del>(deleted): definisce il testo o la parola che deve essere cancellatta dal documento,
+                    viene
                     visualizzata con una riga nera sopra
                 </li>
                 <li>
-                    <ins>ins</ins>(insert): definisce il testo che viene inserito nel documento, il browser quasi sempre sottoliena il
-                    testo inserito
+                    <ins>ins</ins>(insert): definisce il testo che viene inserito nel documento, il browser quasi sempre
+                    sottoliena il testo inserito
                 </li>
                 <li>
                     <sub>sub</sub>(subscript): definisce il testo come pedice. Puo essere usato per le formule chimiche.
@@ -120,7 +769,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 <li>
                     <sup>sup</sup>(supscript): definsce il testo come apice
                 </li>
-                
+
             </ol>
         </div>
     </div>
@@ -162,7 +811,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
         type="a" numera con le lettere dell'alfabeto in minuscolo)
         type="I" numera con i numeri romani
         type="i" numera con i numeri romani in minuscolo-->
-        <h5>Orderd list</h5>
+        <h5 class="bordo">Orderd list</h5>
         <ol type="A">
             <li>Porca madonna</li>
             <li>Porca crista</li>
@@ -228,7 +877,6 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 <source src="/Media/Paul McCartney & Rick Rubin Listen To CANNIBAL CORPSE.WebM">
                 <source src="/Media/Paul McCartney & Rick Rubin Listen To CANNIBAL CORPSE.Ogg">
             </video>
-
         </div>
         <!-- il tag table serve a creare una tabella.
         il tag tr  crea una riga. 
