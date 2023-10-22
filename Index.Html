@@ -11,7 +11,7 @@ Solitamente vengono forniti in coppia: uno di apertura (es: <head>) e uno di chi
     <!-- il tag <head> rappresenta le informazioni su una pagina web e sono informazioni non visibili nella parte grafica del sito.
 Molti dei dati che sono all'interno di questa sezione possono essere collegamenti a script, a fogli di stile CSS-->
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="50">
+    <meta http-equiv="refresh" content="30">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- il tag <title> serve per dare il titolo al sito web -->
     <!-- la differenza tra il tag e l'elemento è che l'elemento è cio che si trova tra il tag di apertura e quello di chiusura  -->
@@ -35,7 +35,7 @@ questo attributo definisce il colore dello sgfondo della pagina web.
 N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori in esadecimale -->
 
 <body>
-    <div class="navbar" >
+    <div class="navbar">
 
     </div>
     <!-- l id è l'identificativo di una tag e si usa solo una volta,si richiama con l'ashtag nel foglio css
@@ -780,14 +780,30 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
     </div>
     <div id="content">
         <div class="cardcontainer">
-            <div class="card"><h1>1</h1></div>
-            <div class="card"><h1>2</h1></div>
-            <div class="card"><h1>3</h1></div>
-            <div class="card"><h1>4</h1></div>
-            <div class="card"><h1>5</h1></div>
-            <div class="card"><h1>6</h1></div>
-            <div class="card"><h1>7</h1></div>
-            <div class="card"><h1>8</h1></div>
+            <div class="card">
+                <h1>1</h1>
+            </div>
+            <div class="card">
+                <h1>2</h1>
+            </div>
+            <div class="card">
+                <h1>3</h1>
+            </div>
+            <div class="card">
+                <h1>4</h1>
+            </div>
+            <div class="card">
+                <h1>5</h1>
+            </div>
+            <div class="card">
+                <h1>6</h1>
+            </div>
+            <div class="card">
+                <h1>7</h1>
+            </div>
+            <div class="card">
+                <h1>8</h1>
+            </div>
         </div>
     </div>
     <!-- il tag audio serve per inserire un file audio (mp3 o wav).
@@ -805,6 +821,15 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
         <source src="/Media/SAN CULAMO-mhanno scomunicato.wav">
         Questo browser supporta i file HTML5 Audio
     </audio>
+    <!-- il tag iframe serve per incorporare un contentuto da un'altra fonte in un documento HTML.
+    Sono comunemente usati per le pubblicità(ads) e usati in alcune tecniche di hacking(clickjacking).
+Sostanzialmente utilizzando il tag iframe possiamo incorporare un altra pagina web all'interno della nostra pagina web oppure si può             incorporare il nostro attuale documento HTML con un altro documento HTML. A causa del clickjacking molti siti web hanno disabilitato l'uso degli iframe  -->
+    <iframe class="iframe" src="https://www.facebook.com/"> This doesn't work</iframe>
+    <!-- il tag button crea un bottone che puo essere usato come hyperlink ad altri siti o web browser, il tag button fa messo all'interno, come elemento, ad un tag anchor che come attributo avra un hyperlink per un altro sito web; in questo caso per youtube  -->
+    <a href="https://www.youtube.com">
+        <button class="button">cliccami</button>
+
+    </a>
     <!-- il tag div serve è un contenitore per organnizare la pagina web e puo contenere qualisiasi tipo di tag (anche altri div) 
             il div di per se non ha alcun effetto sulla visualizzazione almeno finche non gli vengono applicati regole di CSS -->
     <div>
@@ -903,24 +928,24 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
         Un altro attributo è bgcolor; con esso posso decidere il colore di tutta la tabella(se messo all'interno del tag table) 
         oppure il colore della riga (se messo all'interno del tag tr)
         o della singola cella (se posto all'interno dei tag th e td)-->
-        <table >
+        <table>
             <!-- l'attributo align fa in modo che gli elementi all'interno delle celle si allineano al centro, sinistra o destra  -->
-            <tr >
+            <tr>
                 <th>divinità</th>
                 <th>primo attributo</th>
                 <th>secondo attributo</th>
             </tr>
-            <tr >
+            <tr>
                 <th>dio</th>
                 <td>Porco</td>
                 <td>schifoso</td>
             </tr>
-            <tr >
+            <tr>
                 <th>la madonna</th>
                 <td>porca</td>
                 <td>lurida</td>
             </tr>
-            <tr >
+            <tr>
                 <th>padre pio</th>
                 <td>marmaldo</td>
             </tr>
@@ -928,8 +953,8 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
         <!-- L'attributo witdh è utile quando ho la necessità di far in modo che le celle della tabella abbiano tutte la stessa larghezza
             N.B. L'attributo witdh posto all'interno del tag di apertura table è la larghezza di ciascuna cella moltiplicata per il numero di celle
             (es: ogni cella ha una larghezza di 100px, le celle in totale sono 8 ergo il numero di px totale è di 800)-->
-        <table >
-            <tr >
+        <table>
+            <tr>
                 <th>domenica</th>
                 <th>lunedi</th>
                 <th>martedi</th>
@@ -939,7 +964,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 <th>sabato</th>
                 <th>domenica</th>
             </tr>
-            <tr >
+            <tr>
                 <td>9:30</td>
                 <td>9 - 22</td>
                 <td>9 - 23</td>
@@ -949,7 +974,7 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
                 <td>14:40 - 00: 55</td>
                 <td>13:12</td>
             </tr>
-            <tr >
+            <tr>
                 <td>bestemmiare dio</td>
                 <td>bestemmiare San Francesco</td>
                 <td>bestemmiare Padre pio</td>
@@ -1064,6 +1089,106 @@ N.B. Si puo agiungere un colore per un titolo sia con valori rgb che con valori 
             <input type="time" name="time" id="time">
             <!-- questo di input crea un pulsante per inviare al backend le informazioni raccolte nel form -->
             <input type="submit" value="tira giu anche tu">
+        </form>
+        <!-- Se premo il pulsante di submit, anche quando ho compilato tutti i campi, i dati appnea inseriti non andranno da nessuna parte, quindi se devo inviare questi dati ad una pagina devo elencare quella pagina tramite l'attributo action all'intenro del tag form.
+            L'altro attributo da usare è method con i relativi valori più comuni che sono:
+            <ol>
+                <li>get : 
+                    get è considerato insicuro poichè i tuoi dati vengono aggiunti all'URL della pagina web.
+                    <br>
+                    N.B.se si devono inserire dati sensibili, come ad esempio passwords, mai inserire get.
+                    Tuttavia puo risultare utile per le caselle di ricerca se un utente deve navigare internamente nella pagina web tramite parole chiave
+                </li>
+                <li>post :
+                    rispetto a get è più sicuro e se si inseriscono dati sensibili non verrano aggiunti all'URL, tuttavia una volta aver cliccato su submit non accadrà nulla poichè non abbiamo un server dedicato
+                </li>
+            </ol>-->
+        <form action="action_page.php" method="post">
+            <div>
+                <label for="titolo">titolo</label>
+                <br>
+                <label for="S.">Signor.</label>
+                <input type="radio" id="S." name="title" value="S." >
+                <label for="Ss.">signora</label>
+                <input type="radio" id="Ss." name="title" value="Ss." >
+                <label for="Doc">Dott.</label>
+                <input type="radio" id="Doc" name="title" value="Doc" >
+                <label for="Doc2">Dottoressa</label>
+                <input type="radio" id="Doc2" name="title" value="Doc2" >
+            </div>
+            <br>
+            <div>
+                <!-- l'attributo required è un attributo booleano e fa in modo che finche non si compila quel campo non si puo inviare la        richiesta ed apparira una finestra di pop-up che dira di complilare il relativo campo. -->
+                <label for="fname">first name</label>
+                <input type="text" id="fname" name="fname" placeholder="scrivi qui" required>
+            </div>
+            <br>
+            <div>
+
+                <label for="lname">last name</label>
+                <input type="text" id="lname" name="lname" placeholder="Scrivi Qui" required>
+            </div>
+            <div>
+                <br>
+                <div>
+                    <label for="email">email :</label>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+                </div>
+                <div>
+                    <br>
+                    <label for="pass">password :</label>
+                    <br>
+                    <!-- l'attributo maxlength imposta la lunghezza massima del ipertesto da inserire nella casella, in questo caso, ad esempio la lunghezza massima per impostare la password sono massimo di 14 caratteri. -->
+                    <input type="password" id="pass" name="pass" maxlength="14" required>
+                </div>
+                <br>
+                <div>
+                    <br>
+                    <label for="telefono">telefono +39:</label>
+                    <br>
+                    <input type="tel" id="telefono" name="telefono" placeholder="356-713-578">
+                </div>
+                <br>
+                <div>
+                    <br>
+                    <label for="bdate">data di nascita :</label>
+                    <br>
+                    <input type="date"id="bdate" name="bdate">
+                </div>
+                <br>
+                <div>
+                <br>
+                    <!-- Gli attributi min e max si usano per settare un valore minimo e massimo per evitare che, come in questo caso, la casella della quantità possa ragiugnere valori come -100000000000 e +100000000000, quindi creano un limite oltre il quale, sia in negativo che in positivo, i valori non possono sforare. 
+                    L'attributo value imposta un valore di default.-->
+                    <label for="quantità">quantità</label>
+                    <br>
+                    <input type="number" id="quantità" name="quantità" min="0" max="20" value="0">
+                </div>
+                <div>
+                    <br>
+                    <label for="payment"> pagamento:</label>
+                    <br>
+                    <select name="payment" id="payment">
+                        <option value="Visa">Visa</option>
+                        <option value="Mastercard">Mastercard</option>
+                        <option value="Paypal">Paypal</option>
+                        <option value="Giftcard">Giftcard</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="Iscriviti"> Iscriviti:</label>
+                    <input type="checkbox" id="Iscriviti" name="Iscriviti">
+                </div>
+                <br>
+                <!-- questo tipo di input crea il bottone di reset  -->
+                <input type="reset">
+            </div>
+            <br>
+            <div>
+                <input type="submit">
+            </div>
         </form>
     </div>
 </body>

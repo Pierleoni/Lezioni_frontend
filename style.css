@@ -226,3 +226,21 @@ LA differenza tra align-items e align content è che content si considera tutta 
 per richiamare tutti gli elementi inclusi in una classe si scrive  
 es.(tutti gli elementi h1 della classe .card)
 .card h1{...}; */
+iframe{
+    background-color: var(--bright);
+    color: var(--dark);
+    width: 50rem;
+    height: 20rem;
+    border: 1px solid blanchedalmond;
+}
+.button{
+    background-color: #333;
+    color: #0a2;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 2rem;
+    width: 6rem;
+    justify-content: center;
+
+
+}
