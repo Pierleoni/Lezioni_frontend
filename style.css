@@ -1,3 +1,6 @@
+/* Ci sono 3 modi  */
+
+
 /* css è lo stile della pagina, se si usa il tag body all' suo interno posso decidere l'aspeto degli elementi della mia pagina web 
 le regole immesse nel foglio funzionano a cascata : l'ultima regola immessa è quella che ha la priorità; ma se le regole che non vengono ridefinite ereditano secondo le regole del corpo(della pagina web cioe Html)  */
 /* per importare da google o altri siti altre risores esterne (in questo caso dei font) bisogna usare il tag @import e specificare l'URL delle risorse
