@@ -164,7 +164,8 @@ td {
     position: sticky;
     width: 100%;
 }
-.card{
+
+.card {
     background: var(--fdlx);
     border: dotted var(--title);
     height: 20rem;
@@ -175,27 +176,115 @@ td {
     justify-content: center;
     align-items: center;
 }
-.card h1{
+
+.card h1 {
     color: var(--darkac);
 }
+
 /* per selezionare il primo elemento di una classe */
-.card:nth-child(1){
-    background:var(--fdrx); 
+.card:nth-child(1) {
+    background: var(--fdrx);
 }
+
 /* per selezionare l'ultimo elemento di una classe */
-.card:last-child{
-    background:var(--fdrx);
+.card:last-child {
+    background: var(--fdrx);
 }
+
 /* per richiamare tutti gli elemnti pari in un elenco corrispondente a una classe: */
-.card:nth-child(even){
+.card:nth-child(even) {
     height: 17rem;
 }
+
 /* per selzionare i multpli di 3 ricihamare */
-.card:nth-child(3n+0){
+.card:nth-child(3n+0) {
     height: 15rem;
 }
 
-.cardcontainer{
+/* Per usare le flebox abbiamo bisongo di card o contentitori su documento html a cui daremo un classe e su foglio di stile daremo la prorietà display: flex;. Questa visualizzazione crea due assi invisibili: una delle ascisse (asse x) e delle ordinate (asse Y), quindi i nostri elementi non saranno piu uno sopra l'altro perchè questa proprietà li sta posizionando sull'asse delle ascisse e di default quest'asse è orizzontale. Possiamo cambiare la posizione dell'asse attraverso la proprietà flex-direction:
+<ol>
+<li>
+column: sposta l'asse x in verticale quindi anche il nostro contentuto sara posizionato e visualizzato verticalmente dall'alto verso il basso 
+</li>
+<li>
+row(Default):è l'impostazione di default della proprietà, per cui l'asse x è mantenuta verticalmente cosi come i nostri elementi che vengono mantenuti da sx verso dx.
+</li>
+<li>
+row-reverse: fa il contrario del row ovvero gli elementi vengono visualizzati da dx verso sx sulla linea orizzontale 
+</li>
+<li>
+column-reverse: fa il contrario del column, cioè gli elementi vengono visualizzati dal basso verso l'alto 
+</li>
+</ol>
+Ora dobbiamo alinneare gli elementi lungo l'asse x attraverso la prorietà justify-content:
+<ol>
+<li>
+flex start(default): gli elementi sono imballati verso lungo l'asse x da sx verso dx
+</li>
+<li>
+flex end: gli elementi vengono imballati lungo l'asse x da dx verso sx 
+</li>
+<li>
+center: gli elementi vengono posizionati al centro del contentitore (div) che li contiene 
+</li>
+<li>
+space-between: crea spazio tra gli elementi distributi uniformente in fila; il primo elemento si troverà tutto a sx del contenitore, il secondo al centro e l'ultimo tutto a dx.
+</li>
+<li>space-around: simile ma allo stesso tempo diverso da space-between. Crea uno spazio, uguale sui entrambi i lati, intorno gli elementi.
+Ad esempio le card che sono contenute in un contenitore avranno una spaziatura tra i bordi. </li>
+N.B. da notatre che visivamente gli spazi non sono uguali, poichè tutti gli elementi hanno lo spazio uguale su entrambi i lati.
+Difatti il primo elemento (quello a sx) ha una certa unità di spazio tra il bordo e se stesso, mentre tra il primo e il secondo elemento si ha un unità di spazio doppia perchè l'elemento successivo ha una propria spaziatura che si applica. 
+<li>space-evenly: distribuisce lo spazio in modo uniforme tra tutti gli elementi; cioè gli elementi sono distribuiti in modo che la spaziatura tra due elementi (e lo spazio ai bordi) sia uguale.</li>
+</ol>
+Ricapitolando il justify content serve per allineare gli elementi sull'asse x, mentre se vogliamo allineare gli oggetti lungo l'asse y useremo la proprietà align-items:
+<ol>
+<li>
+flex-start: alinea gli elementi  all'inizio dell'asse trasversale (y); in alto 
+</li>
+<li>
+flex-end: alinea gli elementi  alla fine dell'asse trasversale (y); in basso 
+</li>
+<li>
+center: alinea gli elementi  al centro dell'asse trasversale 
+</li>
+<li>
+baseline: alinea gli elementi in modo che il testo della linea di ciascun elemento sia allineato 
+</li>
+<li>stretch(default): allunga gli elementi per riempire il contentitore.</li>
+</ol>
+Per impostazione di default tutti gli elementi proveranno a stare in una riga e quidni se aumentassi gli elementi nel contenitore vengono visualizzati schiacciati l'uno all'altro (questo ovviamente se non ho applicato nessuna prorietà di flex agli elementi), per ovviare a questo problema si usa il felx-wrap:
+<ol>
+<li>
+nowrap(default): non applica nessun avvolgimento degli elementi 
+</li>
+<li>
+wrap: flette gli elementi in più linee, mandadoli anche a capo qualora non ci sia piu spazio.
+</li>
+<li>
+wrap-reverse: gli elementi vengono disposti in più linee dal basso verso l'alto.
+</li>
+</ol>
+Un altra prorietà e l'align-content: da non confondere con l'align-items perchè quest'ultima funziona S O L O quando abbiamo la prorietà flex-wrap settata su wrap o wrap-reverse, questa prorietà alinea tutti gli elementi sull'asse x o meglio dire che alinea gli elementi singoli tra  l'asse orizzontale (x).
+<ol>
+<li>normal(default): gli elementi rimangono posizionati nella loro posizione di default 
+</li>
+<li>flex-start: gli elementi sono impacchettati all'inzio del contentitore 
+</li>
+<li>flex-end: gli elementi vengono posizionati alla fine del contentitore 
+</li>
+<li>center: gli elementi vengono messi al centro del contentitore 
+</li>
+<li> space-between: gli vengono uniformente distributi come nel justify-content</li>
+<li>space-evenly: gli elementi sono uniformente distribuiti con equal spazio tra loro.</li>
+<li>space-evenly: gli elementi sono uniformente distribuiti con equal spazio intorno a loro </li>
+<li>stretch: le linee vengono strecciate pre occuapre lo spazio rimanente</li>
+</ol>
+Inoltre puoi aggiungere un gap o spazio tra gli elementi tramite la prorietà gap (gap:...;).
+N.B. la proprietà gap non è esclusiva per le flexbox, ma funziona anche per la griglia e per i layout multi-colonna. 
+Ci sono anche alcune prorietà della flexbox che riguardano i figli di un contentitore, 
+
+*/
+.cardcontainer {
     background: var(--fdbg);
     height: 50rem;
     display: flex;
@@ -226,14 +315,15 @@ LA differenza tra align-items e align content è che content si considera tutta 
 per richiamare tutti gli elementi inclusi in una classe si scrive  
 es.(tutti gli elementi h1 della classe .card)
 .card h1{...}; */
-iframe{
+iframe {
     background-color: var(--bright);
     color: var(--dark);
     width: 50rem;
     height: 20rem;
     border: 1px solid blanchedalmond;
 }
-.button{
+
+.button {
     background-color: #333;
     color: #0a2;
     border: 1px solid black;
